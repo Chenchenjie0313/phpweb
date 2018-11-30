@@ -1,5 +1,5 @@
 <?php 
-class WString {
+class WString implements Serializable{
 
     private $value = null;
 
@@ -22,7 +22,6 @@ class WString {
     }
     
     public static function anyEmpty(...$params){
-        if ($params == null){ return true;}
         foreach ($params as $val){
             if (self::isEmpty($val)){
                 return true;
@@ -44,6 +43,17 @@ class WString {
 
     public function match($reg){
         return preg_match($reg, $this->value);
+    }
+
+    /***
+     * Serializable
+     * 
+     */
+    public function serialize (  ) {
+        return serialize($this->value);
+    }
+    public function unserialize ( $data ) {
+        $this->value = unserialize($data);
     }
 
 

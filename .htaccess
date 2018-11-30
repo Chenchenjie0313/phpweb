@@ -14,11 +14,11 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ /index.php [L]
 
-###画像とCSSを除外 
-###RewriteCond %{REQUEST_FILENAME} !^(.*)\.(gif|png|jpg|jpeg|css)$ [NC]
-###RewriteRule ^(.*)$ /index.php [L,QSA,PT]
+######画像とCSSを除外 #########
+######RewriteCond %{REQUEST_FILENAME} !^(.*)\.(gif|png|jpg|jpeg|css)$ [NC]
+######RewriteRule ^(.*)$ /index.php [L,QSA,PT]
 
-###RewriteCond %{ENV:REDIRECT_STATUS} 200
-###RewriteRule .* - [L]
-###RewriteCond $1 !^(.*)\.(gif|png|jpg|jpeg|css)$ [NC]
-###RewriteRule ^(.*)$ /index.php [L]
+####RewriteCond %{ENV:REDIRECT_STATUS} 200
+####RewriteRule .* - [L]
+####RewriteCond $1 !^(.*)\.(gif|png|jpg|jpeg|css)$ [NC]
+####RewriteRule ^(.*)$ /index.php [L]

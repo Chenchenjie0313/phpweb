@@ -36,7 +36,7 @@ class Session {
         return $this;
     }
 
-    public function put($key, $value){
+    public function add($key, $value){
         $_SESSION[$key] = $value;
         return $this;
     }

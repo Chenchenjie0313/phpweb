@@ -74,7 +74,7 @@ class View {
         $bytes = openssl_random_pseudo_bytes($TOKEN_LENGTH, $crypto_strong); //希望するバイト長 強い場合は TRUE
         $newToken = bin2hex($bytes);
         //save to session
-        Session::create()->put("web_app_token", $newToken);
+        Session::create()->add("web_app_token", $newToken);
         return "<input type='hidden' name='web_app_token' value='".htmlspecialchars($newToken)."' />";
     }
 

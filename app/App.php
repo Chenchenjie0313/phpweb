@@ -24,6 +24,11 @@ class App {
 
     private function __construct(){
         $this->map = array();
+        /**
+         * 設定ファイルをインクルードする。
+         */
+        $this->importClass('config/StartApp');
+        $this->importClass('config/WRoute');
     }
 
 

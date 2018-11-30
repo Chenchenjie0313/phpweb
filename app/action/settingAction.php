@@ -1,7 +1,6 @@
 <?php
 
-App::import('/web/lib/action/action.php');
-App::import('/web/lib/util/fileHelper.php');
+App::import('action/Action');
 
 class SettingAction extends Action{
 
@@ -9,55 +8,6 @@ class SettingAction extends Action{
         parent::__construct();
         
     }
-    
-    
-    // /**
-    //  * 定数設定画面
-    //  */
-    // public function preview($_QUE){
-
-    //     //初期値
-    //     $title = '';
-    //     $type = 1;
-    //     $id = '';
-    //     $edit = '';
-
-    //     // IDがあった場合、タイトル、コンテンツを設定する。
-    //     if($_QUE['id'] != null && $_QUE['id'] != ''){
-    //         $id = $_QUE['id'];
-    //         $sql = 'SELECT ID,TITLE,TYPE FROM BLOG WHERE id = ? ';
-    //         $blod = Helper::open()->query($sql,[
-    //             'i',
-    //             $id
-    //         ]);
-    //         if($blod != null && count($blod) > 0){
-    //             $id = $blod[0];
-    //             $title = htmlspecialchars($blod[1], ENT_QUOTES);
-    //             $type = $blod[2];
-                
-    //             $path = $_SERVER['DOCUMENT_ROOT'] . "/upload/" . $type . '_' . $id . '.txt';
-    //             $edit = FileHelper::getText($path);
-    //             if($edit === false){
-    //                 $edit = "コンテンツが存在されていない。[ID:${id},PATH:${path}]";
-    //             } else {
-    //                 // $edit = htmlspecialchars($edit, ENT_QUOTES);
-    //             }
-               
-    //         } else {
-    //             $edit = "データが存在されていない。[ID:${id}]";
-    //         }
-    //     }
-
-    //     $_REQUEST['editData'] = [
-    //         'title' => $title,
-    //         'type' => $type,
-    //         'id' => $id,
-    //         'edit' => $edit,
-    //         'msg' => $msg
-    //     ];
-
-    //     return '/html/complete/previewCard.php';
-    // }
     
     /**
      * 定数設定画面
@@ -186,83 +136,6 @@ class SettingAction extends Action{
         return Forward::createAjaxJson();
 
     }
-
-    // /**
-    //  * ブログを保存する。
-    //  * 
-    //  */
-    // public function templeteList($_QUE){
-    //     $pageIndex = $_QUE['pageIndex'];
-    //     $type = $_QUE['type'];
-    //     //LIMIT 開始　レコード数
-    //     $total_records = Helper::open()->queryCount('SELECT count(1) FROM BLOG');
-
-    //     // $num_records_perpage = 100;
-    //     $num_records_perpage = 100;
-    //     $total_pages = ceil(intval($total_records) / $num_records_perpage);
-
-    //     Utils::WriteLog("total_pages =>  " , $total_pages);
-        
-    //     if(Validator::isEmpty($pageIndex) || Validator::isNotInteger($pageIndex)){
-    //         $pageIndex = 1;
-
-    //     } else {
-    //         $pageIndex = intval($pageIndex);
-    //     }
-
-    //     Utils::WriteLog("total_pages =>  " , $total_pages);
-
-    //     if($pageIndex > $total_pages && $total_pages > 0){
-    //         $pageIndex = $total_pages;
-    //     }
-        
-    //     $start_from = ($pageIndex-1) * $num_records_perpage;
-    //     $start_to = ($pageIndex) * $num_records_perpage;
-
-    //     Utils::WriteLog("from => to : " , $start_from . " =>" .  $start_to);
-
-    //     $data = null;
-    //     if(Validator::isEmpty($type)){
-    //         $data = Helper::open()->queryAll(('SELECT ID,TITLE,TYPE FROM BLOG order by id limit ?,?'), [
-    //             'ii', $start_from, $start_to
-    //         ]);
-    //     } else {
-    //         $data = Helper::open()->queryAll(('SELECT ID,TITLE,TYPE FROM BLOG WHERE TYPE = ? order by id limit ?,?'), [
-    //             'sii', $type, $start_from, $start_to
-    //         ]);
-    //     }
-
-    //     $arr = array();
-    //     if($data != null && count($data) > 0){
-    //         //list:[[img,name,time,text],[...]]
-    //         for($i=0;$i<count($data);$i++){
-    //             $arr[$i] = array();
-    //             $arr[$i]['id'] = $data[$i][0];
-    //             $arr[$i]['text'] = $data[$i][1];
-    //             $arr[$i]['type'] = $data[$i][2];
-    //             $arr[$i]['name'] = '';
-    //             $arr[$i]['time'] = '';
-    //         }
-    //     }
-
-    //     $pageTitle = 'お知らせ';
-    //     if($type == "1"){
-    //         $pageTitle = 'Java';
-    //     } else if ($type == "2"){
-    //         $pageTitle = 'JavaScript/CSS';
-    //     } else if ($type == "3"){
-    //         $pageTitle = 'Oracle';
-    //     } else if ($type == "4"){
-    //         $pageTitle = 'ES6の入門';
-    //     } else if ($type == "99"){
-    //         $pageTitle = 'その他';
-    //     }
-    //     $_REQUEST['dataList'] = [
-    //         'title' => $pageTitle,
-    //         'list' => $arr
-    //     ];
-    //     return '/html/complete/list001.php';
-    // }
 
     /**
      * ブログ・お知らせを保存する。

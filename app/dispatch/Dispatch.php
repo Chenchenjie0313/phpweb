@@ -1,5 +1,7 @@
 <?php 
 
+App::import('routes/Route');
+
 /***
  * 
  * 
@@ -55,7 +57,7 @@ class Dispatch {
      */
     public function dispatchRouter($item){
         if ($this -> max <= 0 ){
-            return ;
+            return false;
         }
         $this -> max = $this -> max - 1;
         Logger::log(__METHOD__.",行:".__LINE__,"dispatchRouter[開始] ", $item, " MAX回数". $this->max);
@@ -63,7 +65,7 @@ class Dispatch {
         if ($item != null && is_object($item) && $item instanceof RouteNode){
 
             //Forwadが空白文字ではない。
-            $forward = $item->getForward();
+            $forward = $item->getValue();
             
             if ($forward != null && is_callable($forward)){
                 Logger::log(__METHOD__.",行:".__LINE__, "コールバック関数", $forward);
@@ -82,7 +84,7 @@ class Dispatch {
                         Logger::log(__METHOD__.",行:".__LINE__, "dispatchRouter [結果] : " ,$returnVal);
                         return $returnVal;
                     } 
-                    else if ($returnVal instanceof RouteItem){
+                    else if ($returnVal instanceof RouteNode){
                         return $this->dispatchRouter($returnVal);
                     } 
                     else {
@@ -117,39 +119,31 @@ class Dispatch {
         $uri = Request::create()->getUri();
         if (!WString::isEmpty($uri)){
             $pathArray = WString::create($uri)->split(APP_SLASH);
-            Logger::log(__METHOD__.",行:".__LINE__, $pathArray);
-            if ($pathArray !== false){
-                foreach($pathArray as $path){
-                    if (!WString::isEmpty($path)){
-
-                        //キーにより、ルートを取得する。
-                        $target = Route::get($path);
-
-                        if ($target == null){
-                            throw new Exception("ルートが存在していない。");
-                        }
-                        //2.Uルートアイテムにより、APP処理を行い
-                        else if (is_object($target) && $target instanceof RouteNode){
-                            Logger::log(__METHOD__.",行:".__LINE__, "RouteNode", $target);
-                            $item = $this->dispatchRouter($target);
-                        }
-                        //文字列の場合、
-                        else if (is_string($target)){
-                            Logger::log(__METHOD__.",行:".__LINE__, "文字列", $target);
-                            $item = $target;
-                        }
-                        break;
-
-                    }
+            $realPath = "";
+            foreach($pathArray as $path){
+                if (WString::isEmpty($path)){
+                    continue;
+                } else if ($realPath == "") {
+                    $realPath = $path;
+                } else {
+                    $realPath .= APP_SLASH.$path;
                 }
+            }
+            Logger::log(__METHOD__.",行:".__LINE__, "dispatchRouter [パス] : " . $realPath);
+            
+            //キーにより、ルートを取得する。
+            //$realPath = aaa/bbb
+            $target = Route::get($realPath);
+            Logger::log(__METHOD__.",行:".__LINE__, $target);
+            if ($target == null){
+                throw new Exception("ルートが存在していない。");
+            }
+            //ノードにより、処理を実行し、結果を返す。
+            else {
+                return $this->dispatchRouter($target);
             }
 
         }
-        //3.APP処理結果的をリターンする。
-        if ($item != null && is_string($item)){
-            return $item;
-        }
-        return WEB_APP_DEFAULT_VIEW;
     }
 
 }

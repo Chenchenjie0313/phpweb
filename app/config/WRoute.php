@@ -4,7 +4,6 @@ App::import('http/Request');
 App::import('routes/Route');
 
 
-Route::any("/",WEB_APP_DEFAULT_VIEW);
 Route::any("access","access");
 Route::any("bxslider","bxslider");
 Route::any("event","event");
@@ -20,10 +19,8 @@ Route::any("inquiry","|parts,inquiry");
 Route::any("inquiry_submit","InquiryAction@submit");
 Route::any("inquiry_back","InquiryAction@back");
 Route::any("inquiry_confirmation",function(){
-    // $token = Session::create()->get('web_app_token');
-    // if ($token != null && $token == Request::create()->input('web_app_token')){
-    //     return "InquiryAction@confirmation";
-    // }
-    // return "index";
     return "InquiryAction@confirmation";
 });
+
+
+Route::any(WEB_APP_DEFAULT_VIEW_PATH, WEB_APP_DEFAULT_VIEW);

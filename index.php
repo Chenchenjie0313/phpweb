@@ -2,13 +2,8 @@
 error_reporting(E_ERROR | E_PARSE);
 
 define('BASE_WEB_ROOT', __DIR__);
-
-define('APP_SLASH', '/');
-
-// define('WEB_APP_DEFAULT_VIEW', 'index');
-define('WEB_APP_DEFAULT_VIEW', 'layout2|index');
-
 require_once BASE_WEB_ROOT.'/app/App.php';
+
 
 App::import('exception/WException');
 App::import('helper/View');
@@ -17,18 +12,9 @@ App::import('dispatch/Dispatch');
 
 try{
 
-    // Logger::log(__METHOD__.",行:".__LINE__, "設定開始");
-    //Read config    
-    App::import('config/WRoute');
-    App::import('config/StartApp');
-    // Logger::log(__METHOD__.",行:".__LINE__, "設定完了");
-
-    // Logger::log(__METHOD__.",行:".__LINE__, "URL:". Request::create()->getUri());
-
     // App::import('db/MyPDO');
     // $dbre = MyPDO::create()->select('select * from blog where id = :id',[':id'=>0]);
-    // Logger::log(__METHOD__.",行:".__LINE__, $dbre);
-
+    // 実行して、結果を取得する。
     $target = Dispatch::create()->excute();
 
     //結果が文字列の場合、
@@ -39,8 +25,8 @@ try{
     else if (is_string($target)){
         Logger::log(__METHOD__.",行:".__LINE__, "{$target}");
         $viewData = Request::create()->view();
-        $prePageData = WArray::create()->put('target', $target)->put('viewData', $viewData);
-        Session::create()->put("prePageData", prePageData);
+        $prePageData = WArray::create()->add('target', $target)->add('viewData', $viewData);
+        Session::create()->add("prePageData", prePageData);
         View::view($target);
     }
     else {
@@ -50,12 +36,12 @@ try{
     
 
 }catch(Exception $e){
-    // Logger::log(__METHOD__.",行:".__LINE__, $e);
-    // if ($e instanceof WException){
-    //     View::view("errors,error");
-    // } else {
-    //     View::view(WEB_APP_DEFAULT_VIEW);
-    // }
+    Logger::log(__METHOD__.",行:".__LINE__, $e);
+    if ($e instanceof WException){
+        View::view("errors,error");
+    } else {
+        View::view(WEB_APP_DEFAULT_VIEW);
+    }
 }
 
 

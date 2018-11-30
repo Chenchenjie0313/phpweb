@@ -47,9 +47,9 @@ class Request {
         }
         //URI
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-        $this->headData->put('ajax', $isAjax)
-                    ->put('ip', $ip)
-                    ->put('uri', $uri);
+        $this->headData->add('ajax', $isAjax)
+                    ->add('ip', $ip)
+                    ->add('uri', $uri);
 
         //SESSION
         $this->session = Session::create();
@@ -73,7 +73,7 @@ class Request {
             return $this->outputData->get($params[0]);
         }
         else if (count($params) == 2){
-            $this->outputData->put($params[0], $params[1]);
+            $this->outputData->add($params[0], $params[1]);
             return $this;
         }
         Logger::log(__METHOD__.",行:".__LINE__, $params, "params num is wrong");
@@ -87,12 +87,12 @@ class Request {
     public function copyInputToView(...$params){
         $list = WArray::create($params);
         if ($list->size() == 0){
-            $this->viewData->addList($this->input());
+            $this->viewData->addAll($this->input());
             Logger::log(__METHOD__.",行:".__LINE__, $this->viewData);
         }
         else {
             foreach ($list->keys() as $key){
-                $this->viewData->put($key, $this->input($key));
+                $this->viewData->add($key, $this->input($key));
             }
         }
         Logger::log(__METHOD__.",行:".__LINE__, $this->viewData);
@@ -109,22 +109,22 @@ class Request {
             return $this->viewData->get($list->get(0));
         }
         else if ($list->size() == 2){
-            $this->viewData->put($list->get(0),$list->get(1));
+            $this->viewData->add($list->get(0),$list->get(1));
             return $this;
         }
-        return WArray::create()->addList($this->viewData);
+        return WArray::create()->addAll($this->viewData);
     }
 
     public function error(...$params){
         $list = WArray::create($params);
         if ($list->size() == 0){
-            return WArray::create()->addList($this->errorData);
+            return WArray::create()->addAll($this->errorData);
         }
         else if ($list->size() == 1){
             return $this->errorData->get($list->get(0));
         }
         else if ($list->size() == 2){
-            $this->errorData->put($list->get(0), $list->get(1));
+            $this->errorData->add($list->get(0), $list->get(1));
             return $this;
         }
         Logger::log(__METHOD__.",行:".__LINE__, $params, "params num is wrong");
@@ -143,13 +143,13 @@ class Request {
 
         $list = WArray::create($params);
         if ($list->isEmpty()){
-            return WArray::create().addList($_REQUEST).addList($this->outputData);
+            return WArray::create().addAll($_REQUEST).addAll($this->outputData);
         }
         else if ($list->size() == 1){
             return $_REQUEST[$params[0]];
         }
         else if ($list->size() == 2){
-            return $this->outputData->put($list->get(0), $list->get(1));
+            return $this->outputData->add($list->get(0), $list->get(1));
         }
         Logger::log(__METHOD__.",行:".__LINE__, $params, "params num is wrong");
         throw new Exception(__METHOD__ . "args is error!");

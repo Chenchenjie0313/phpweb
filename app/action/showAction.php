@@ -1,7 +1,7 @@
 <?php
 
-App::import('/web/lib/action/action.php');
-App::import('/web/lib/util/fileHelper.php');
+
+App::import('action/Action');
 
 class ShowAction extends Action{
 

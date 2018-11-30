@@ -4,20 +4,8 @@ class Logger {
     private function __construct(){
 
     }
-
-	// private static $instance = null;
-
-    // private static function create(){
-    //     if (self::$instance == null){
-    //         self::$instance = new View();
-    //     }
-    //     return self::$instance;
-    // }
-
+    
     public static function log(...$params){
-        //1.func_num_args — 返回传入函数的参数总个数
-        //2.func_get_args — 返回传入函数的参数列表
-        //3.func_get_arg — 根据参数索引从参数列表返回参数值
         if(count($params) == 0){
             return ;
         }

@@ -42,17 +42,17 @@ class WArray implements ArrayAccess,Serializable {
         return null;
     }
 
-    public function put($key, $value){
+    public function add($key, $value){
         $this->value[$key] = $value;
         return $this;
     }
-
-    public function addList($values){
+    
+    public function addAll($values){
         if ($values != null){
             if (is_array($values)){
                 $this->value = array_merge($this->value, $values);
             } else if (is_object($values) && $values instanceof WArray){
-                $this->value = array_merge($this->value, $values->clone());
+                $this->value = array_merge($this->value, $values->cloneArray());
             }
 
         }
@@ -63,7 +63,7 @@ class WArray implements ArrayAccess,Serializable {
      * 配列を返却
      * 
      */
-    public function clone(){
+    public function cloneArray(){
         return array_merge(array(),$this->value);
     }
 
