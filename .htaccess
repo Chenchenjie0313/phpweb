@@ -1,0 +1,24 @@
+RewriteEngine on
+RewriteBase /
+
+###publicフォルタ以外の場合、###
+###RewriteCond %{REQUEST_URI} !(^/除外ディレクトリ名/)
+###RewriteCond %{REQUEST_URI} !^/public/.+$
+###RewriteRule ^(.*)$ /index.php [L]
+
+####RewriteCond %{REQUEST_FILENAME} -f
+####RewriteCond %{REQUEST_FILENAME} (.*)\.(gif|png|jpg|jpeg|css)$ [NC]
+####RRewriteRule ^ - [L,QSA]
+
+#####ファイルが存在していない場合、### [OR] ###
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /index.php [L]
+
+###画像とCSSを除外 
+###RewriteCond %{REQUEST_FILENAME} !^(.*)\.(gif|png|jpg|jpeg|css)$ [NC]
+###RewriteRule ^(.*)$ /index.php [L,QSA,PT]
+
+###RewriteCond %{ENV:REDIRECT_STATUS} 200
+###RewriteRule .* - [L]
+###RewriteCond $1 !^(.*)\.(gif|png|jpg|jpeg|css)$ [NC]
+###RewriteRule ^(.*)$ /index.php [L]
