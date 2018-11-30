@@ -1,0 +1,2800 @@
+@charset "utf-8";
+
+/* @group 基本要素のリセット */
+
+body {
+-webkit-text-size-adjust: none;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th, td {
+	font-weight: normal;
+}
+
+img {
+border: 0;
+vertical-align: top;
+line-height: 0;
+max-width: 100%;
+height: auto;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+h1,h2,h3,h4,h5{
+/* 20160525 
+font-family: 'Noto Sans Japanese', sans-serif;
+*/
+font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "MS PGothic", sans-serif;
+font-size: 1em;
+z-index: 10;/*ADD 201608*/
+}
+
+h1.ttlnormalTxt,h2.ttlnormalTxt,h3.ttlnormalTxt,h4.ttlnormalTxt,h5.ttlnormalTxt{
+font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS PGothic", sans-serif;
+font-weight: normal;
+	}
+
+a {
+color: #007aff;
+text-decoration: none;
+}
+
+a:visited {
+	
+}
+
+a:hover {
+color: #2EC5DF !important;
+text-decoration: underline !important;
+}
+
+a:focus {
+outline: none;
+text-decoration: underline;
+}
+
+a:hover, a:active {
+outline: none;
+}
+
+em {
+	font-style: normal;
+	font-weight: bold;
+	color: #000;
+}
+
+strong {
+	font-style: normal;
+	font-weight: bold;
+	color: #000;
+}
+
+sub, sup {
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+script{
+display: none;
+height: 0px;
+}
+
+/* @end */
+
+/* @group フォーム要素のリセット */
+
+form, fieldset, input, textarea {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset {
+	border: 0;
+}
+
+legend {
+	border: 0;
+	*margin-left: -7px;
+	padding: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+cursor: pointer;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+}
+
+input[type="search"] {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+input:invalid, textarea:invalid {
+	background-color: #f0dddd;
+}
+
+/* @end */
+
+/* @group フォントファミリーとサイズ */
+
+* html body {
+	font-family: 'ＭＳ Ｐゴシック',sans-serif;
+}
+
+*:first-child+html body {
+	font-family: 'メイリオ','ＭＳ Ｐゴシック',sans-serif;
+}
+
+body {
+	*font-size: small;
+	*font: x-small;
+}
+
+table {
+	font-size: inherit;
+	font: 100%;
+}
+
+sub, sup {
+	font-size: 77%;
+}
+
+select, input, button, textarea, button {
+font: 99% arial, helvetica, clean, sans-serif;
+}
+
+input[type="button"], input[type="submit"] , input[type="reset"] {
+-webkit-appearance: none;
+border: none;
+padding: 0;
+cursor: pointer;
+width: auto;
+background-image: none;
+}
+
+pre, code, kbd, samp, tt {
+	font-family: monospace;
+	*font-size: 108%;
+	line-height: 1;
+	white-space: pre-wrap;/* 20160728 */
+}
+
+
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+
+/* @end */
+
+/* @group for HTML5 */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+audio[controls], canvas, video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+/* @end */
+
+/* @group 汎用スタイル */
+
+/* @group クリアとハック */
+
+
+.cf:before, .cf:after { 
+content: ""; 
+display: block; 
+overflow: hidden; 
+}
+	
+.cf:after { 
+clear: both; 
+}
+
+.cf { 
+zoom: 1; 
+}
+
+.wrapper {
+	overflow: hidden;
+}
+
+.png {
+	behavior: url(/js/png.htc);
+}
+
+.hide {
+	display: none;
+}
+
+/* @end */
+
+/* @group 画像ボタンのホバー効果 */
+
+a:hover img {
+opacity: 0.9;
+-moz-opacity : 0.9;
+-ms-filter: alpha( opacity=90 ) !important;
+filter: alpha( opacity=90 ) !important;
+}
+
+a.noeffect:hover img {
+	opacity: inherit;
+	-moz-opacity :inherit;
+	-ms-filter: alpha( opacity=100 ) !important;
+	filter: alpha( opacity=100 ) !important;
+}
+
+a.smalleffect:hover img {
+opacity: 0.95;
+-moz-opacity : 0.9;
+-ms-filter: alpha( opacity=90 ) !important;
+filter: alpha( opacity=90 ) !important;
+}
+
+/* @end */
+
+/* @group フォント */
+
+/* @group フォント - サイズ */
+
+.font10 {
+	font-size: 77% !important;
+}
+
+.font11 {
+	font-size: 85% !important;
+}
+
+.font12 {
+	font-size: 93% !important;
+}
+
+.font13 {
+	font-size: 100% !important;
+}
+
+.font14 {
+	font-size: 108% !important;
+}
+
+.font15 {
+	font-size: 116% !important;
+}
+
+.font16 {
+	font-size: 123.1% !important;
+}
+
+.font17 {
+	font-size: 131% !important;
+}
+
+.font18 {
+	font-size: 138.5% !important;
+}
+
+.font19 {
+	font-size: 146.5% !important;
+}
+
+.font20 {
+font-size: 153.9% !important;
+}
+
+.font21 {
+	font-size: 161.6% !important;
+}
+
+.font22 {
+	font-size: 167% !important;
+}
+
+.font23 {
+	font-size: 174% !important;
+}
+
+.font24 {
+	font-size: 182% !important;
+}
+
+.font25 {
+	font-size: 189% !important;
+}
+
+.font26 {
+	font-size: 197% !important;
+}
+
+/* @end */
+
+/* @group フォント - 行間 */
+
+/* フォントサイズと同じ値を指定したいとき */
+
+.lh10 {
+	line-height: 77% !important;
+}
+
+.lh11 {
+	line-height: 85% !important;
+}
+
+.lh12 {
+	line-height: 93% !important;
+}
+
+.lh13 {
+	line-height: 100% !important;
+}
+
+.lh14 {
+	line-height: 108% !important;
+}
+
+.lh15 {
+	line-height: 116% !important;
+}
+
+.lh16 {
+	line-height: 123.1% !important;
+}
+
+.lh17 {
+	line-height: 131% !important;
+}
+
+.lh18 {
+	line-height: 138.5% !important;
+}
+
+.lh19 {
+	line-height: 146.5% !important;
+}
+
+.lh20 {
+	line-height: 153.9% !important;
+}
+
+.lh21 {
+	line-height: 161.6% !important;
+}
+
+.lh22 {
+	line-height: 167% !important;
+}
+
+.lh23 {
+	line-height: 174% !important;
+}
+
+.lh24 {
+	line-height: 182% !important;
+}
+
+.lh25 {
+	line-height: 189% !important;
+}
+
+.lh26 {
+	line-height: 197% !important;
+}
+
+/* 通常の行間指定 */
+
+.lh80 {
+	line-height: 80% !important;
+}
+
+.lh90 {
+	line-height: 90% !important;
+}
+
+.lh100 {
+	line-height: 100% !important;
+}
+
+.lh110 {
+	line-height: 110% !important;
+}
+
+.lh120 {
+	line-height: 120% !important;
+}
+
+.lh130 {
+	line-height: 130% !important;
+}
+
+.lh140 {
+	line-height: 140% !important;
+}
+
+.lh150 {
+line-height: 150% !important;
+}
+
+.lh160 {
+	line-height: 160% !important;
+}
+
+.lh170 {
+	line-height: 170% !important;
+}
+
+.lh180 {
+	line-height: 180% !important;
+}
+
+.lh190 {
+	line-height: 190% !important;
+}
+
+.lh200 {
+line-height: 200% !important;
+}
+
+.lh210 {
+	line-height: 210% !important;
+}
+
+.lh220 {
+	line-height: 220% !important;
+}
+
+.lh230 {
+	line-height: 230% !important;
+}
+
+.lh240 {
+	line-height: 240% !important;
+}
+
+.lh250 {
+	line-height: 250% !important;
+}
+
+.lh260 {
+	line-height: 260% !important;
+}
+
+.lh270 {
+	line-height: 270% !important;
+}
+
+.lh280 {
+	line-height: 280% !important;
+}
+
+.lh290 {
+	line-height: 290% !important;
+}
+
+.lh300 {
+	line-height: 300% !important;
+}
+
+/* @end */
+
+/* @group フォント - 文字間 */
+
+.ls-01 {
+	letter-spacing: -0.1em;
+}
+
+.ls-008 {
+	letter-spacing: -0.08em;
+}
+
+.ls01 {
+	letter-spacing: 0.1em;
+}
+
+.ls02 {
+	letter-spacing: 0.2em;
+}
+
+.ls03 {
+	letter-spacing: 0.3em;
+}
+
+.ls04 {
+	letter-spacing: 0.4em;
+}
+
+.ls05 {
+	letter-spacing: 0.5em;
+}
+
+.ls06 {
+	letter-spacing: 0.6em;
+}
+
+.ls07 {
+	letter-spacing: 0.7em;
+}
+
+.ls08 {
+	letter-spacing: 0.8em;
+}
+
+.ls09 {
+	letter-spacing: 0.9em;
+}
+
+.ls10 {
+	letter-spacing: 1.0em;
+}
+
+.ls11 {
+	letter-spacing: 1.1em;
+}
+
+.ls12 {
+	letter-spacing: 1.2em;
+}
+
+.ls13 {
+	letter-spacing: 1.3em;
+}
+
+.ls14 {
+	letter-spacing: 1.4em;
+}
+
+.ls15 {
+	letter-spacing: 1.5em;
+}
+
+.ls16 {
+	letter-spacing: 1.6em;
+}
+
+.ls17 {
+	letter-spacing: 1.7em;
+}
+
+.ls18 {
+	letter-spacing: 1.8em;
+}
+
+.ls19 {
+	letter-spacing: 1.9em;
+}
+
+.ls20 {
+	letter-spacing: 2.0em;
+}
+
+/*IE6での連続したbr対策*/
+
+br {
+	letter-spacing: 0 !important;
+}
+
+/* @end */
+
+/* @group フォント - 行揃え */
+
+.alignleft {
+	text-align: left !important;
+}
+
+.alignright {
+	text-align: right !important;
+}
+
+.aligncenter {
+	text-align: center !important;
+}
+
+.v-aligntop{
+vertical-align: top !important;
+}
+.v-alignmiddle{
+vertical-align: middle !important;
+}
+.v-alignbottom{
+vertical-align: bottom !important;
+}
+
+/* @end */
+
+/* @group フォント - スタイル */
+
+.mono {
+	font-family: monospace;
+}
+
+.bold {
+/*	font-weight: bold; 20171108 cmn.cssの設定をreset.cssに反映 */
+	font-weight: 700;
+}
+
+.nobold {
+	font-weight: normal;
+}
+
+/* @end */
+
+/* @group フォント - 強調、注意喚起 */
+
+strong {
+	/*color: #e4007f;*/
+}
+
+em {
+	/*color: #e4007f;*/
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.txt-warning {
+	/*警告*/
+	color: #f00 !important;
+	font-weight: bold;
+}
+
+.txt-caution {
+	/*注意喚起*/
+	color: #f90 !important;
+	font-weight: bold;
+}
+
+.txt-info {
+	/*お知らせ*/
+	color: #567 !important;
+}
+
+.txt-note {
+	/*メモ*/
+	color: #567 !important;
+}
+
+.txt-annotation {
+	/*補足*/
+	color: #9ab !important;
+}
+
+/* @end */
+
+/* @group フォント - 文字色 */
+
+body {
+/* [disabled]color: #000; */
+}
+
+.black {color: #000 !important;}
+.white {color: #fff !important;}
+.gray {color: #999 !important;}
+.gray01 {color: #f0f0f0 !important;}
+.gray02 {color: #f8f8f8 !important;}
+.gray03 {color: #e0e0e7 !important;}
+.red {color: #f00 !important;}
+.crimson {color: #dc143c !important;}
+.darkred {color: #b00 !important;}
+.salmonpink {color: #e78 !important;}
+.purple {color: #83c !important;}
+.blue {color: #03c !important;}
+.blue01 {color: #4c9ed9 !important;}
+.blue02 {color: #007aff !important;}
+.green {color: #080 !important;}
+.yellow {color: #ff0 !important;}
+.orange {color: #f90 !important;}
+.deeporange {color: #f60 !important;}
+.lightblue {color: #0ae !important;}
+.lightgreen {color: #7b2 !important;}
+.yellowgreen {color: #9c1 !important;}
+.bluegreen {color: #3a9 !important;}
+.lightyellow {color: #ff9 !important;}
+.darkblue {color: #106287 !important;}
+
+/* 枠色 */
+.bd-black {border-color: #000 !important;}
+.bd-white {border-color: #fff !important;}
+.bd-gray {border-color: #999 !important;}
+.bd-gray01 {border-color: #f0f0f0 !important;}
+.bd-gray02 {border-color: #f8f8f8 !important;}
+.bd-gray03 {border-color: #e0e0e7 !important;}
+.bd-red {border-color: #f00 !important;}
+.bd-crimson {border-color: #dc143c !important;}
+.bd-darkred {border-color: #b00 !important;}
+.bd-salmonpink {border-color: #e78 !important;}
+.bd-purple {border-color: #83c !important;}
+.bd-blue {border-color: #03c !important;}
+.bd-blue01 {border-color: #4c9ed9 !important;}
+.bd-blue02 {border-color: #007aff !important;}
+.bd-green {border-color: #080 !important;}
+.bd-yellow {border-color: #ff0 !important;}
+.bd-orange {border-color: #f90 !important;}
+.bd-deeporange {border-color: #f60 !important;}
+.bd-lightblue {border-color: #0ae !important;}
+.bd-lightgreen {border-color: #7b2 !important;}
+.bd-yellowgreen {border-color: #9c1 !important;}
+.bd-bluegreen {border-color: #3a9 !important;}
+.bd-lightyellow {border-color: #ff9 !important;}
+.bd-darkblue {border-color: #106287 !important;}
+
+/* 背景色 20180223 cmn.cssから移動 */
+.bg-black {background-color: #000 !important;}
+.bg-white {background-color: #fff !important;}
+.bg-gray {background-color: #999 !important;}
+.bg-gray01 {background-color: #f0f0f0 !important;}
+.bg-gray02 {background-color: #f8f8f8 !important;}
+.bg-gray03 {background-color: #e0e0e7 !important;}
+.bg-red {background-color: #f00 !important;}
+.bg-crimson {background-color: #dc143c !important;}
+.bg-darkred {background-color: #b00 !important;}
+.bg-salmonpink {background-color: #e78 !important;}
+.bg-purple {background-color: #83c !important;}
+.bg-blue {background-color: #03c !important;}
+.bg-blue01 {background-color: #4c9ed9 !important;}
+.bg-blue02 {background-color: #007aff !important;}
+.bg-green {background-color: #080 !important;}
+.bg-yellow {background-color: #ff0 !important;}
+.bg-orange {background-color: #f90 !important;}
+.bg-deeporange {background-color: #f60 !important;}
+.bg-lightblue {background-color: #0ae !important;}
+.bg-lightgreen {background-color: #7b2 !important;}
+.bg-yellowgreen {background-color: #9c1 !important;}
+.bg-bluegreen {background-color: #3a9 !important;}
+.bg-lightyellow {background-color: #ff9 !important;}
+.bg-darkblue {background-color: #106287 !important;}
+
+/* @end */
+
+/* @group フォント - リンク色 */
+
+a.noUl:link, a.noUl:visited, a.noUl:hover, a.noUl:active {
+	text-decoration: none;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group フロート */
+
+.floatleft,
+.fl{
+float: left;
+}
+
+.floatright,
+.fr {
+	float: right;
+}
+
+/* @end */
+
+/* @group マージン (px) */
+
+.m0 {
+	margin: 0 !important;
+}
+
+.m05 {
+	margin: 5px !important;
+}
+
+.m10 {
+	margin: 10px !important;
+}
+
+.m15 {
+	margin: 15px !important;
+}
+
+.m20 {
+	margin: 20px !important;
+}
+
+.m25 {
+	margin: 25px !important;
+}
+
+.m30 {
+	margin: 30px !important;
+}
+
+.m35 {
+	margin: 35px !important;
+}
+
+.m40 {
+	margin: 40px !important;
+}
+
+.m45 {
+	margin: 45px !important;
+}
+
+.m50 {
+	margin: 50px !important;
+}
+
+.mV0 {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.mV05 {
+	margin-top: 5px !important;
+	margin-bottom: 5px !important;
+}
+
+.mV10 {
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
+}
+
+.mV15 {
+	margin-top: 15px !important;
+	margin-bottom: 15px !important;
+}
+
+.mV20 {
+	margin-top: 20px !important;
+	margin-bottom: 20px !important;
+}
+
+.mV25 {
+	margin-top: 25px !important;
+	margin-bottom: 25px !important;
+}
+
+.mV30 {
+	margin-top: 30px !important;
+	margin-bottom: 30px !important;
+}
+
+.mV35 {
+	margin-top: 35px !important;
+	margin-bottom: 35px !important;
+}
+
+.mV40 {
+	margin-top: 40px !important;
+	margin-bottom: 40px !important;
+}
+
+.mV45 {
+	margin-top: 45px !important;
+	margin-bottom: 45px !important;
+}
+
+.mV50 {
+	margin-top: 50px !important;
+	margin-bottom: 50px !important;
+}
+
+.mH0 {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.mH05 {
+	margin-left: 5px !important;
+	margin-right: 5px !important;
+}
+
+.mH10 {
+	margin-left: 10px !important;
+	margin-right: 10px !important;
+}
+
+.mH15 {
+	margin-left: 15px !important;
+	margin-right: 15px !important;
+}
+
+.mH20 {
+	margin-left: 20px !important;
+	margin-right: 20px !important;
+}
+
+.mH25 {
+	margin-left: 25px !important;
+	margin-right: 25px !important;
+}
+
+.mH30 {
+	margin-left: 30px !important;
+	margin-right: 30px !important;
+}
+
+.mH35 {
+	margin-left: 35px !important;
+	margin-right: 35px !important;
+}
+
+.mH40 {
+	margin-left: 40px !important;
+	margin-right: 40px !important;
+}
+
+.mH45 {
+	margin-left: 45px !important;
+	margin-right: 45px !important;
+}
+
+.mH50 {
+	margin-left: 50px !important;
+	margin-right: 50px !important;
+}
+
+.mT0 {
+	margin-top: 0 !important;
+}
+
+.mT05 {
+	margin-top: 5px !important;
+}
+
+.mT10 {
+	margin-top: 10px !important;
+}
+
+.mT15 {
+	margin-top: 15px !important;
+}
+
+.mT20 {
+	margin-top: 20px !important;
+}
+
+.mT25 {
+	margin-top: 25px !important;
+}
+
+.mT30 {
+	margin-top: 30px !important;
+}
+
+.mT35 {
+	margin-top: 35px !important;
+}
+
+.mT40 {
+	margin-top: 40px !important;
+}
+
+.mT45 {
+	margin-top: 45px !important;
+}
+
+.mT50 {
+	margin-top: 50px !important;
+}
+
+.mB0 {
+	margin-bottom: 0 !important;
+}
+
+.mB05 {
+	margin-bottom: 5px !important;
+}
+
+.mB10 {
+	margin-bottom: 10px !important;
+}
+
+.mB15 {
+	margin-bottom: 15px !important;
+}
+
+.mB20 {
+	margin-bottom: 20px !important;
+}
+
+.mB25 {
+	margin-bottom: 25px !important;
+}
+
+.mB30 {
+	margin-bottom: 30px !important;
+}
+
+.mB35 {
+	margin-bottom: 35px !important;
+}
+
+.mB40 {
+	margin-bottom: 40px !important;
+}
+
+.mB45 {
+	margin-bottom: 45px !important;
+}
+
+.mB50 {
+	margin-bottom: 50px !important;
+}
+
+.mL0 {
+	margin-left: 0 !important;
+}
+
+.mL05 {
+	margin-left: 5px !important;
+}
+
+.mL10 {
+	margin-left: 10px !important;
+}
+
+.mL15 {
+	margin-left: 15px !important;
+}
+
+.mL20 {
+	margin-left: 20px !important;
+}
+
+.mL25 {
+	margin-left: 25px !important;
+}
+
+.mL30 {
+	margin-left: 30px !important;
+}
+
+.mL35 {
+	margin-left: 35px !important;
+}
+
+.mL40 {
+	margin-left: 40px !important;
+}
+
+.mL45 {
+	margin-left: 45px !important;
+}
+
+.mL50 {
+	margin-left: 50px !important;
+}
+
+.mR0 {
+	margin-right: 0 !important;
+}
+
+.mR05 {
+	margin-right: 5px !important;
+}
+
+.mR10 {
+	margin-right: 10px !important;
+}
+
+.mR15 {
+	margin-right: 15px !important;
+}
+
+.mR20 {
+	margin-right: 20px !important;
+}
+
+.mR25 {
+	margin-right: 25px !important;
+}
+
+.mR30 {
+	margin-right: 30px !important;
+}
+
+.mR35 {
+	margin-right: 35px !important;
+}
+
+.mR40 {
+	margin-right: 40px !important;
+}
+
+.mR45 {
+	margin-right: 45px !important;
+}
+
+.mR50 {
+	margin-right: 50px !important;
+}
+
+.mR150 {
+	margin-right: 150px !important;
+}
+
+/* @end */
+
+/* @group マージン (em) */
+
+.m05em {
+	margin: 0.5em !important;
+}
+
+.m1em {
+	margin: 1em !important;
+}
+
+.m15em {
+	margin: 1.5em !important;
+}
+
+.m2em {
+	margin: 2em !important;
+}
+
+.m25em {
+	margin: 2.5em !important;
+}
+
+.m3em {
+	margin: 3em !important;
+}
+
+.m35em {
+	margin: 3.5em !important;
+}
+
+.m4em {
+	margin: 4em !important;
+}
+
+.m45em {
+	margin: 4.5em !important;
+}
+
+.m5em {
+	margin: 5em !important;
+}
+
+.mV05em {
+	margin-top: 0.5em !important;
+	margin-bottom: 0.5em !important;
+}
+
+.mV1em {
+	margin-top: 1em !important;
+	margin-bottom: 1em !important;
+}
+
+.mV15em {
+	margin-top: 1.5em !important;
+	margin-bottom: 1.5em !important;
+}
+
+.mV2em {
+	margin-top: 2em !important;
+	margin-bottom: 2em !important;
+}
+
+.mV25em {
+	margin-top: 2.5em !important;
+	margin-bottom: 2.5em !important;
+}
+
+.mV3em {
+	margin-top: 3em !important;
+	margin-bottom: 3em !important;
+}
+
+.mV35em {
+	margin-top: 3.5em !important;
+	margin-bottom: 3.5em !important;
+}
+
+.mV4em {
+	margin-top: 4em !important;
+	margin-bottom: 4em !important;
+}
+
+.mV45em {
+	margin-top: 4.5em !important;
+	margin-bottom: 4.5em !important;
+}
+
+.mV5em {
+	margin-top: 5em !important;
+	margin-bottom: 5em !important;
+}
+
+.mH05em {
+	margin-left: 0.5em !important;
+	margin-right: 0.5em !important;
+}
+
+.mH1em {
+	margin-left: 1em !important;
+	margin-right: 1em !important;
+}
+
+.mH15em {
+	margin-left: 1.5em !important;
+	margin-right: 1.5em !important;
+}
+
+.mH2em {
+	margin-left: 2em !important;
+	margin-right: 2em !important;
+}
+
+.mH25em {
+	margin-left: 2.5em !important;
+	margin-right: 2.5em !important;
+}
+
+.mH3em {
+	margin-left: 3em !important;
+	margin-right: 3em !important;
+}
+
+.mH35em {
+	margin-left: 3.5em !important;
+	margin-right: 3.5em !important;
+}
+
+.mH4em {
+	margin-left: 4em !important;
+	margin-right: 4em !important;
+}
+
+.mH45em {
+	margin-left: 4.5em !important;
+	margin-right: 4.5em !important;
+}
+
+.mH5em {
+	margin-left: 5em !important;
+	margin-right: 5em !important;
+}
+
+.mT05em {
+	margin-top: 0.5em !important;
+}
+
+.mT1em {
+	margin-top: 1em !important;
+}
+
+.mT15em {
+	margin-top: 1.5em !important;
+}
+
+.mT2em {
+	margin-top: 2em !important;
+}
+
+.mT25em {
+	margin-top: 2.5em !important;
+}
+
+.mT3em {
+	margin-top: 3em !important;
+}
+
+.mT35em {
+	margin-top: 3.5em !important;
+}
+
+.mT4em {
+	margin-top: 4em !important;
+}
+
+.mT45em {
+	margin-top: 4.5em !important;
+}
+
+.mT5em {
+	margin-top: 5em !important;
+}
+
+/* PCのみ上にマージン：2018/8/30
+---------------------------------------------------------- */
+@media screen and (min-width:768px) {
+.pc-mT05em {
+	margin-top: 0.5em !important;
+}
+
+.pc-mT1em {
+	margin-top: 1em !important;
+}
+
+.pc-mT15em {
+	margin-top: 1.5em !important;
+}
+
+.pc-mT2em {
+	margin-top: 2em !important;
+}
+
+.pc-mT25em {
+	margin-top: 2.5em !important;
+}
+
+.pc-mT3em {
+	margin-top: 3em !important;
+}
+
+}/* PCのみ上にマージン ここまで ---------------------------------------------------------- */
+
+
+
+.mB05em {
+	margin-bottom: 0.5em !important;
+}
+
+.mB1em {
+	margin-bottom: 1em !important;
+}
+
+.mB15em {
+	margin-bottom: 1.5em !important;
+}
+
+.mB2em {
+	margin-bottom: 2em !important;
+}
+
+.mB25em {
+	margin-bottom: 2.5em !important;
+}
+
+.mB3em {
+	margin-bottom: 3em !important;
+}
+
+.mB35em {
+	margin-bottom: 3.5em !important;
+}
+
+.mB4em {
+	margin-bottom: 4em !important;
+}
+
+.mB45em {
+	margin-bottom: 4.5em !important;
+}
+
+.mB5em {
+	margin-bottom: 5em !important;
+}
+
+.mL05em {
+	margin-left: 0.5em !important;
+}
+
+.mL1em {
+	margin-left: 1em !important;
+}
+
+.mL15em {
+	margin-left: 1.5em !important;
+}
+
+.mL2em {
+	margin-left: 2em !important;
+}
+
+.mL25em {
+	margin-left: 2.5em !important;
+}
+
+.mL3em {
+	margin-left: 3em !important;
+}
+
+.mL35em {
+	margin-left: 3.5em !important;
+}
+
+.mL4em {
+	margin-left: 4em !important;
+}
+
+.mL45em {
+	margin-left: 4.5em !important;
+}
+
+.mL5em {
+	margin-left: 5em !important;
+}
+
+.mR05em {
+	margin-right: 0.5em !important;
+}
+
+.mR1em {
+	margin-right: 1em !important;
+}
+
+.mR15em {
+	margin-right: 1.5em !important;
+}
+
+.mR2em {
+	margin-right: 2em !important;
+}
+
+.mR25em {
+	margin-right: 2.5em !important;
+}
+
+.mR3em {
+	margin-right: 3em !important;
+}
+
+.mR35em {
+	margin-right: 3.5em !important;
+}
+
+.mR4em {
+	margin-right: 4em !important;
+}
+
+.mR45em {
+	margin-right: 4.5em !important;
+}
+
+.mR5em {
+	margin-right: 5em !important;
+}
+
+/* @end */
+
+/* @group パディング (px) */
+
+.p0 {
+	padding: 0 !important;
+}
+
+.p05 {
+	padding: 5px !important;
+}
+
+.p10 {
+	padding: 10px !important;
+}
+
+.p15 {
+	padding: 15px !important;
+}
+
+.p20 {
+	padding: 20px !important;
+}
+
+.p25 {
+	padding: 25px !important;
+}
+
+.p30 {
+	padding: 30px !important;
+}
+
+.p35 {
+	padding: 35px !important;
+}
+
+.p40 {
+	padding: 40px !important;
+}
+
+.p45 {
+	padding: 45px !important;
+}
+
+.p50 {
+	padding: 50px !important;
+}
+
+.pV0 {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.pV05 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+}
+
+.pV10 {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+}
+
+.pV15 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important;
+}
+
+.pV20 {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
+}
+
+.pV25 {
+	padding-top: 25px !important;
+	padding-bottom: 25px !important;
+}
+
+.pV30 {
+	padding-top: 30px !important;
+	padding-bottom: 30px !important;
+}
+
+.pV35 {
+	padding-top: 35px !important;
+	padding-bottom: 35px !important;
+}
+
+.pV40 {
+	padding-top: 40px !important;
+	padding-bottom: 40px !important;
+}
+
+.pV45 {
+	padding-top: 45px !important;
+	padding-bottom: 45px !important;
+}
+
+.pV50 {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important;
+}
+
+.pH0 {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.pH05 {
+	padding-left: 5px !important;
+	padding-right: 5px !important;
+}
+
+.pH10 {
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+}
+
+.pH15 {
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+
+.pH20 {
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
+
+.pH25 {
+	padding-left: 25px !important;
+	padding-right: 25px !important;
+}
+
+.pH30 {
+	padding-left: 30px !important;
+	padding-right: 30px !important;
+}
+
+.pH35 {
+	padding-left: 35px !important;
+	padding-right: 35px !important;
+}
+
+.pH40 {
+	padding-left: 40px !important;
+	padding-right: 40px !important;
+}
+
+.pH45 {
+	padding-left: 45px !important;
+	padding-right: 45px !important;
+}
+
+.pH50 {
+	padding-left: 50px !important;
+	padding-right: 50px !important;
+}
+
+.pT0 {
+	padding-top: 0 !important;
+}
+
+.pT05 {
+	padding-top: 5px !important;
+}
+
+.pT10 {
+	padding-top: 10px !important;
+}
+
+.pT15 {
+	padding-top: 15px !important;
+}
+
+.pT20 {
+	padding-top: 20px !important;
+}
+
+.pT25 {
+	padding-top: 25px !important;
+}
+
+.pT30 {
+	padding-top: 30px !important;
+}
+
+.pT35 {
+	padding-top: 35px !important;
+}
+
+.pT40 {
+	padding-top: 40px !important;
+}
+
+.pT45 {
+	padding-top: 45px !important;
+}
+
+.pT50 {
+	padding-top: 50px !important;
+}
+
+.pB0 {
+	padding-bottom: 0 !important;
+}
+
+.pB05 {
+	padding-bottom: 5px !important;
+}
+
+.pB10 {
+	padding-bottom: 10px !important;
+}
+
+.pB15 {
+	padding-bottom: 15px !important;
+}
+
+.pB20 {
+	padding-bottom: 20px !important;
+}
+
+.pB25 {
+	padding-bottom: 25px !important;
+}
+
+.pB30 {
+	padding-bottom: 30px !important;
+}
+
+.pB35 {
+	padding-bottom: 35px !important;
+}
+
+.pB40 {
+	padding-bottom: 40px !important;
+}
+
+.pB45 {
+	padding-bottom: 45px !important;
+}
+
+.pB50 {
+	padding-bottom: 50px !important;
+}
+
+.pL0 {
+	padding-left: 0 !important;
+}
+
+.pL05 {
+	padding-left: 5px !important;
+}
+
+.pL10 {
+	padding-left: 10px !important;
+}
+
+.pL15 {
+	padding-left: 15px !important;
+}
+
+.pL20 {
+	padding-left: 20px !important;
+}
+
+.pL25 {
+	padding-left: 25px !important;
+}
+
+.pL30 {
+	padding-left: 30px !important;
+}
+
+.pL35 {
+	padding-left: 35px !important;
+}
+
+.pL40 {
+	padding-left: 40px !important;
+}
+
+.pL45 {
+	padding-left: 45px !important;
+}
+
+.pL50 {
+	padding-left: 50px !important;
+}
+
+.pR0 {
+	padding-right: 0 !important;
+}
+
+.pR05 {
+	padding-right: 5px !important;
+}
+
+.pR10 {
+	padding-right: 10px !important;
+}
+
+.pR15 {
+	padding-right: 15px !important;
+}
+
+.pR20 {
+	padding-right: 20px !important;
+}
+
+.pR25 {
+	padding-right: 25px !important;
+}
+
+.pR30 {
+	padding-right: 30px !important;
+}
+
+.pR35 {
+	padding-right: 35px !important;
+}
+
+.pR40 {
+	padding-right: 40px !important;
+}
+
+.pR45 {
+	padding-right: 45px !important;
+}
+
+.pR50 {
+	padding-right: 50px !important;
+}
+
+.pR150 {
+	padding-right: 150px !important;
+}
+
+/* @end */
+
+/* @group パディング (em) */
+
+.p05em {
+	padding: 0.5em !important;
+}
+
+.p1em {
+	padding: 1em !important;
+}
+
+.p15em {
+	padding: 1.5em !important;
+}
+
+.p2em {
+	padding: 2em !important;
+}
+
+.p25em {
+	padding: 2.5em !important;
+}
+
+.p3em {
+	padding: 3em !important;
+}
+
+.p35em {
+	padding: 3.5em !important;
+}
+
+.p4em {
+	padding: 4em !important;
+}
+
+.p45em {
+	padding: 4.5em !important;
+}
+
+.p5em {
+	padding: 5em !important;
+}
+
+.pV05em {
+	padding-top: 0.5em !important;
+	padding-bottom: 0.5em !important;
+}
+
+.pV1em {
+	padding-top: 1em !important;
+	padding-bottom: 1em !important;
+}
+
+.pV15em {
+	padding-top: 1.5em !important;
+	padding-bottom: 1.5em !important;
+}
+
+.pV2em {
+	padding-top: 2em !important;
+	padding-bottom: 2em !important;
+}
+
+.pV25em {
+	padding-top: 2.5em !important;
+	padding-bottom: 2.5em !important;
+}
+
+.pV3em {
+	padding-top: 3em !important;
+	padding-bottom: 3em !important;
+}
+
+.pV35em {
+	padding-top: 3.5em !important;
+	padding-bottom: 3.5em !important;
+}
+
+.pV4em {
+	padding-top: 4em !important;
+	padding-bottom: 4em !important;
+}
+
+.pV45em {
+	padding-top: 4.5em !important;
+	padding-bottom: 4.5em !important;
+}
+
+.pV5em {
+	padding-top: 5em !important;
+	padding-bottom: 5em !important;
+}
+
+.pH05em {
+	padding-left: 0.5em !important;
+	padding-right: 0.5em !important;
+}
+
+.pH1em {
+	padding-left: 1em !important;
+	padding-right: 1em !important;
+}
+
+.pH15em {
+	padding-left: 1.5em !important;
+	padding-right: 1.5em !important;
+}
+
+.pH2em {
+	padding-left: 2em !important;
+	padding-right: 2em !important;
+}
+
+.pH25em {
+	padding-left: 2.5em !important;
+	padding-right: 2.5em !important;
+}
+
+.pH3em {
+	padding-left: 3em !important;
+	padding-right: 3em !important;
+}
+
+.pH35em {
+	padding-left: 3.5em !important;
+	padding-right: 3.5em !important;
+}
+
+.pH4em {
+	padding-left: 4em !important;
+	padding-right: 4em !important;
+}
+
+.pH45em {
+	padding-left: 4.5em !important;
+	padding-right: 4.5em !important;
+}
+
+.pH5em {
+	padding-left: 5em !important;
+	padding-right: 5em !important;
+}
+
+.pT05em {
+	padding-top: 0.5em !important;
+}
+
+.pT1em {
+	padding-top: 1em !important;
+}
+
+.pT15em {
+	padding-top: 1.5em !important;
+}
+
+.pT2em {
+	padding-top: 2em !important;
+}
+
+.pT25em {
+	padding-top: 2.5em !important;
+}
+
+.pT3em {
+	padding-top: 3em !important;
+}
+
+.pT35em {
+	padding-top: 3.5em !important;
+}
+
+.pT4em {
+	padding-top: 4em !important;
+}
+
+.pT45em {
+	padding-top: 4.5em !important;
+}
+
+.pT5em {
+	padding-top: 5em !important;
+}
+
+/* スマホのみ上にパディング：2018/10/18
+---------------------------------------------------------- */
+@media screen and (max-width:767px) {
+.sp-pT1em {
+padding-top:1em !important;
+}
+
+}/* スマホのみ上にパディング ここまで ---------------------------------------------------------- */
+
+
+
+.pB05em {
+	padding-bottom: 0.5em !important;
+}
+
+.pB1em {
+	padding-bottom: 1em !important;
+}
+
+.pB15em {
+	padding-bottom: 1.5em !important;
+}
+
+.pB2em {
+	padding-bottom: 2em !important;
+}
+
+.pB25em {
+	padding-bottom: 2.5em !important;
+}
+
+.pB3em {
+	padding-bottom: 3em !important;
+}
+
+.pB35em {
+	padding-bottom: 3.5em !important;
+}
+
+.pB4em {
+	padding-bottom: 4em !important;
+}
+
+.pB45em {
+	padding-bottom: 4.5em !important;
+}
+
+.pB5em {
+	padding-bottom: 5em !important;
+}
+
+.pL05em {
+	padding-left: 0.5em !important;
+}
+
+.pL1em {
+	padding-left: 1em !important;
+}
+
+.pL15em {
+	padding-left: 1.5em !important;
+}
+
+.pL2em {
+	padding-left: 2em !important;
+}
+
+.pL25em {
+	padding-left: 2.5em !important;
+}
+
+.pL3em {
+	padding-left: 3em !important;
+}
+
+.pL35em {
+	padding-left: 3.5em !important;
+}
+
+.pL4em {
+	padding-left: 4em !important;
+}
+
+.pL45em {
+	padding-left: 4.5em !important;
+}
+
+.pL5em {
+	padding-left: 5em !important;
+}
+
+.pR05em {
+	padding-right: 0.5em !important;
+}
+
+.pR1em {
+	padding-right: 1em !important;
+}
+
+.pR15em {
+	padding-right: 1.5em !important;
+}
+
+.pR2em {
+	padding-right: 2em !important;
+}
+
+.pR25em {
+	padding-right: 2.5em !important;
+}
+
+.pR3em {
+	padding-right: 3em !important;
+}
+
+.pR35em {
+	padding-right: 3.5em !important;
+}
+
+.pR4em {
+	padding-right: 4em !important;
+}
+
+.pR45em {
+	padding-right: 4.5em !important;
+}
+
+.pR5em {
+	padding-right: 5em !important;
+}
+/* @end */
+
+/* @group 幅 */
+
+.w1em {
+	width: 1em !important;
+}
+
+.w2em {
+	width: 2em !important;
+}
+
+.w3em {
+	width: 3em !important;
+}
+
+.w4em {
+	width: 4em !important;
+}
+
+.w5em {
+	width: 5em !important;
+}
+
+.w10 {
+	width: 10px !important;
+}
+
+.w20 {
+	width: 20px !important;
+}
+
+.w30 {
+	width: 30px !important;
+}
+
+.w40 {
+	width: 40px !important;
+}
+
+.w50 {
+	width: 50px !important;
+}
+
+.w60 {
+	width: 60px !important;
+}
+
+.w70 {
+	width: 70px !important;
+}
+
+.w80 {
+	width: 80px !important;
+}
+
+.w90 {
+	width: 90px !important;
+}
+
+.w100 {
+	width: 100px !important;
+}
+
+.w110 {
+	width: 110px !important;
+}
+
+.w120 {
+	width: 120px !important;
+}
+
+.w130 {
+	width: 130px !important;
+}
+
+.w140 {
+	width: 140px !important;
+}
+
+.w150 {
+	width: 150px !important;
+}
+
+.w160 {
+	width: 160px !important;
+}
+
+.w170 {
+	width: 170px !important;
+}
+
+.w180 {
+	width: 180px !important;
+}
+
+.w185 {
+	width: 185px !important;
+}
+
+.w190 {
+	width: 190px !important;
+}
+
+.w195 {
+	width: 195px !important;
+}
+
+.w200 {
+	width: 200px !important;
+}
+
+.w210 {
+	width: 210px !important;
+}
+
+.w220 {
+	width: 220px !important;
+}
+
+.w230 {
+	width: 230px !important;
+}
+
+.w240 {
+	width: 240px !important;
+}
+
+.w250 {
+	width: 250px !important;
+}
+
+.w260 {
+	width: 260px !important;
+}
+
+.w270 {
+	width: 270px !important;
+}
+
+.w280 {
+	width: 280px !important;
+}
+
+.w290 {
+	width: 290px !important;
+}
+
+.w300 {
+	width: 300px !important;
+}
+
+.w310 {
+	width: 310px !important;
+}
+
+.w320 {
+	width: 320px !important;
+}
+
+.w330 {
+	width: 330px !important;
+}
+
+.w340 {
+	width: 340px !important;
+}
+
+.w350 {
+	width: 350px !important;
+}
+
+.w360 {
+	width: 360px !important;
+}
+
+.w370 {
+	width: 370px !important;
+}
+
+.w380 {
+	width: 380px !important;
+}
+
+.w385 {
+	width: 385px !important;
+}
+
+.w390 {
+	width: 390px !important;
+}
+
+.w400 {
+	width: 400px !important;
+}
+
+.w410 {
+	width: 410px !important;
+}
+
+.w420 {
+	width: 420px !important;
+}
+
+.w430 {
+	width: 430px !important;
+}
+
+.w440 {
+	width: 440px !important;
+}
+
+.w450 {
+	width: 450px !important;
+}
+
+.w460 {
+	width: 460px !important;
+}
+
+.w470 {
+	width: 470px !important;
+}
+
+.w480 {
+	width: 480px !important;
+}
+
+.w490 {
+	width: 490px !important;
+}
+
+.w500 {
+	width: 500px !important;
+}
+
+.w510 {
+	width: 510px !important;
+}
+
+.w520 {
+	width: 520px !important;
+}
+
+.w530 {
+	width: 530px !important;
+}
+
+.w540 {
+	width: 540px !important;
+}
+
+.w550 {
+	width: 550px !important;
+}
+
+.w560 {
+	width: 560px !important;
+}
+
+.w570 {
+	width: 570px !important;
+}
+
+.w580 {
+	width: 580px !important;
+}
+
+.w590 {
+	width: 590px !important;
+}
+
+.w600 {
+	width: 600px !important;
+}
+
+.w610 {
+	width: 610px !important;
+}
+
+.w620 {
+	width: 620px !important;
+}
+
+.w630 {
+	width: 630px !important;
+}
+
+.w640 {
+	width: 640px !important;
+}
+
+.w650 {
+	width: 650px !important;
+}
+
+.w660 {
+	width: 660px !important;
+}
+
+.w670 {
+	width: 670px !important;
+}
+
+.w680 {
+	width: 680px !important;
+}
+
+.w690 {
+	width: 690px !important;
+}
+
+.w700 {
+	width: 700px !important;
+}
+
+.w980 {
+	width: 980px !important;
+}
+
+.w100pct {
+	width: 100% !important;
+}
+
+/* @end */
+
+
+/* @group テキストインデント 20160420 */
+.indent1em{
+	text-indent:-1em;
+	padding-left:1em;
+}
+.indent2em{
+	text-indent:-2em;
+	padding-left:2em;
+}
+.indent3em{
+	text-indent:-3em;
+	padding-left:3em;
+}
+.indent4em{
+	text-indent:-4em;
+	padding-left:4em;
+}
+.indent5em{
+	text-indent:-5em;
+	padding-left:5em;
+}
+.indent1hem{
+	text-indent:-1.5em;
+	padding-left:1.5em;
+}
+.indent2hem{
+	text-indent:-2.5em;
+	padding-left:2.5em;
+}
+.indent3hem{
+	text-indent:-3.5em;
+	padding-left:3.5em;
+}
+.indent4hem{
+	text-indent:-4.5em;
+	padding-left:4.5em;
+}
+.indent5hem{
+	text-indent:-5.5em;
+	padding-left:5.5em;
+}
+/* @end */
+
+/* @group ボーダー 20171031 */
+.bt-none{
+border-top-style: none!important;
+}
+.bl-none{
+border-left-style: none!important;
+}
+.br-none{
+border-right-style: none!important;
+}
+.bb-none{
+border-bottom-style: none!important;
+}
+/* @end */
+
+/* @group 幅（テキストフィールド） */
+
+/*テキストフィールドは左右パディング4pxと左右ボーダー1px（後ほど指定）を差し引く必要がある*/
+
+input.text.w20, textarea.w20 {
+	width: 10px !important;
+}
+
+input.text.w30, textarea.w30 {
+	width: 20px !important;
+}
+
+input.text.w40, textarea.w40 {
+	width: 30px !important;
+}
+
+input.text.w50, textarea.w50 {
+	width: 40px !important;
+}
+
+input.text.w60, textarea.w60 {
+	width: 50px !important;
+}
+
+input.text.w70, textarea.w70 {
+	width: 60px !important;
+}
+
+input.text.w80, textarea.w80 {
+	width: 70px !important;
+}
+
+input.text.w90, textarea.w90 {
+	width: 80px !important;
+}
+
+input.text.w100, textarea.w100 {
+	width: 90px !important;
+}
+
+input.text.w110, textarea.w110 {
+	width: 100px !important;
+}
+
+input.text.w120, textarea.w120 {
+	width: 110px !important;
+}
+
+input.text.w130, textarea.w130 {
+	width: 120px !important;
+}
+
+input.text.w140, textarea.w140 {
+	width: 130px !important;
+}
+
+input.text.w150, textarea.w150 {
+	width: 140px !important;
+}
+
+input.text.w160, textarea.w160 {
+	width: 150px !important;
+}
+
+input.text.w170, textarea.w170 {
+	width: 160px !important;
+}
+
+input.text.w180, textarea.w180 {
+	width: 170px !important;
+}
+
+input.text.w190, textarea.w190 {
+	width: 180px !important;
+}
+
+input.text.w195, textarea.w195 {
+	width: 185px !important;
+}
+
+input.text.w200, textarea.w200 {
+	width: 190px !important;
+}
+
+input.text.w250, textarea.w250 {
+	width: 240px !important;
+}
+
+input.text.w300, textarea.w300 {
+	width: 290px !important;
+}
+
+input.text.w350, textarea.w350 {
+	width: 340px !important;
+}
+
+input.text.w400, textarea.w400 {
+	width: 390px !important;
+}
+
+input.text.w450, textarea.w450 {
+	width: 440px !important;
+}
+
+input.text.w500, textarea.w500 {
+	width: 490px !important;
+}
+
+input.text.w550, textarea.w550 {
+	width: 540px !important;
+}
+
+input.text.w600, textarea.w600 {
+	width: 590px !important;
+}
+
+/* @end */
+
+/* @group リスト（ノーマル） */
+
+ul.normal {
+	list-style-type: disc;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-left: 2em;
+}
+
+ol.normal {
+	list-style-type: decimal;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-left: 2em;
+}
+
+dl.normal {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+dl.normal > dt {
+	font-weight: bold;
+}
+
+dl.inline > dt {
+	display: inline;
+	margin-right: .5em;
+	font-weight: bold;
+}
+
+dl.inline > dd {
+	display: inline;
+}
+
+/* @end */
+
+/* @group アイコンフォント */
+
+.fa, .far, .fab, .fas { /* 20180911 .far 追加 */
+padding-right: 6px;
+text-indent: 0;
+}
+.faR {
+padding-left: 3px;
+padding-right: 1px!important;
+}
+.faF {
+padding-left: 14px;
+padding-right: 1px!important;
+}
+.fa-file-pdf-o{}
+
+.fa-right {
+	padding-left: 5px;
+	padding-right: 0;
+}
+
+.fa-both {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.fa-min {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/* @end */
+
+/* @group テーブル（ノーマル） */
+
+table.normal {
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	border-collapse: collapse;
+}
+
+table.normal > tr > th,
+table.normal > tr > td,
+table.normal > thead > tr > th,
+table.normal > thead > tr > td,
+table.normal > tbody > tr > th,
+table.normal > tbody > tr > td {
+	padding: .5em .8em;
+	border: 1px solid #ccc;
+}
+
+table.normal > tr > th,
+table.normal > thead > tr > th,
+table.normal > tbody > tr > th {
+	font-weight: bold;
+}
+
+table.normal > tr > th,
+table.normal > thead > tr > th {
+	background-color: #f1f1f1;
+}
+
+table.normal > tbody > tr > th {
+	background-color: #f9f9f9;
+}
+
+/* @end */
+
+
+/* @group Skypeアイコン */
+/* 20160615 IE11で電話番号のところにSkypeアイコンが表示されてしまうのを防ぐ */
+img[title^="通話:"]{
+display:none !important;
+}
+
+/* @end */
+
+@media print {
+
+thead {
+	display: table-header-group;
+}
+
+tr, img {
+	page-break-inside: avoid;
+}
+
+img {
+	max-width: 100% !important;
+}
+
+@page { margin: 0.5cm; }
+
+h2, h3 {
+	page-break-after: avoid;
+}
+
+}
+/*---------------------------------------------------------- */
+/* @media screen and (max-width:767px) */
+/*---------------------------------------------------------- */
+@media screen and (max-width:767px) {
+h1,h2,h3,h4,h5{
+font-family: initial;
+line-height: 1.3;
+}
+
+}
