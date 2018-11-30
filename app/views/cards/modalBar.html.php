@@ -3,7 +3,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title"><img src="/img/logo.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity:.8">メーニュ</h4>
+        <h4 class="modal-title"><img src="<?= View::img('logo.png'); ?>" alt="Logo" class="brand-image img-circle elevation-3" style="opacity:.8">メーニュ</h4>
         <button type="button" class="close" data-dialog="close">&times;</button>
       </div>
       <!-- Modal body -->
@@ -30,13 +30,13 @@
                     </a>
                 <li>
                 <li>
-                    <a href="javascript:void(0)" data-modalid="showUploadListView" data-url="/templete/upload.txt" data-data-type="HTML" >
+                    <a href="javascript:void(0)" data-modalid="showUploadListView" data-url="/public/upload/upload.txt" data-data-type="HTML" >
                         <i class="fa fa-circle-o nav-icon"></i>
                         <span>アップロード</span>
                     </a>
                 <li>
                 <li>
-                    <a href="javascript:void(0)" data-pageid="showEditView" data-url="/templete/editCard.txt" data-data-type="HTML" >
+                    <a href="javascript:void(0)" data-pageid="showEditView" data-url="/public/upload/editCard.txt" data-data-type="HTML" >
                         <i class="fa fa-circle-o nav-icon"></i>
                         <span>エディタ</span>
                     </a>
@@ -51,7 +51,7 @@
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)" data-pageid="foodMenuList" data-url='/templete/footMenuList.txt' data-data-type="HTML" >
+                <a href="javascript:void(0)" data-pageid="foodMenuList" data-url='/public/upload/footMenuList.txt' data-data-type="HTML" >
                     <i class="nav-icon fa fa-tree"></i>
                     <span>料理</span>
                     <span class="right badge badge-danger">NEW</span>
@@ -59,7 +59,7 @@
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)" data-modalid="link" data-url='/templete/link.txt' data-data-type="HTML" >
+                <a href="javascript:void(0)" data-modalid="link" data-url='/public/upload/link.txt' data-data-type="HTML" >
                     <i class="nav-icon fa fa-tree"></i>
                     <span>リンク</span>
                     <span class="right badge badge-danger">NEW</span>
@@ -67,7 +67,7 @@
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)" data-pageid="help" data-url='/templete/help.txt' data-data-type="HTML" >
+                <a href="javascript:void(0)" data-pageid="help" data-url='/public/upload/help.txt' data-data-type="HTML" >
                     <i class="nav-icon fa fa-tree"></i>
                     <span>ヘルプ</span>
                 </a>

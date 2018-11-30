@@ -1,0 +1,148 @@
+<div class="card card-blog carouselCard" id="footMenuListCarouselCard">
+    <div class="card-header">
+        <h3 class="card-title">料理一覧</h3>
+    </div>
+
+    <div class="card-body">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-control="show" data-slide-to="0" class="active"></li>
+          <li data-control="show" data-slide-to="1" class=""></li>
+          <li data-control="show" data-slide-to="2" class=""></li>
+          <li data-control="show" data-slide-to="3" class=""></li>
+        </ol>
+        <div class="carousel-inner" style="max-height:360px;">
+          <div class="carousel-item active" style="max-height:360px;">
+            <img class="d-block w-100" src="/img/food/001.jpg" alt="First slide" style="max-height:360px;">
+          </div>
+          <div class="carousel-item " style="max-height:360px;">
+            <img class="d-block w-100" src="/img/food/002.jpg" alt="First slide" style="max-height:360px;">
+          </div>
+          <div class="carousel-item" style="max-height:360px;">
+            <img class="d-block w-100" src="/img/food/003.jpg" alt="First slide" style="max-height:360px;">
+          </div>
+          <div class="carousel-item" style="max-height:360px;">
+            <img class="d-block w-100" src="/img/food/004.jpg" alt="First slide" style="max-height:360px;">
+          </div>
+          <div class="carousel-item clone" style="max-height:360px;">
+            <img class="d-block w-100" src="/img/food/001.jpg" alt="First slide" style="max-height:360px;">
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="javascript:void(0);" data-carouse="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="javascript:void(0);" data-carouse="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div><!-- /.card-body -->
+
+    <!-- positoin:relation; top:10px; -->
+    <div class="card-footer">        
+        <ol class="carousel-indicators indicators">
+          <li data-control="show" data-slide-to="1" class="active"></li>
+          <li data-control="show" data-slide-to="2" class=""></li>
+          <li data-control="show" data-slide-to="3" class=""></li>
+          <li data-control="show" data-slide-to="4" class=""></li>
+        </ol>
+    </div><!-- /.card-footer-->
+
+    <div class="card-footer" style="position:relative;">
+        <ol class="indicators carousel-indicators">
+          <li data-control="show" data-slide-to="1" class="active"></li>
+          <li data-control="show" data-slide-to="2" class=""></li>
+          <li data-control="show" data-slide-to="3" class=""></li>
+          <li data-control="show" data-slide-to="4" class=""></li>
+        </ol>
+    </div><!-- /.card-footer-->
+
+</div>
+
+<div class="card card-blog" id="footMenuListBaseCard">
+    <div class="card-body" style="border-left: 5px solid #fa0;">
+        <a data-submenu="#footMenuList001" class="common-pointer">1.糖醋排骨</a>
+    </div>
+    <div class="card-body" id="footMenuList001" style="display:none;border: 1px solid rgb(255, 170, 0);">
+        <div class="card-group common-mb-2">
+            <div class="card">
+            <img class="card-img-top" src="/img/food/footMenuList001.jpg" alt="Card image" style="max-height:450px;">
+            <!--
+            <div class="card-body">
+                <h4 class="card-title">参考先</h4>
+                <p class="card-text">http://yasuke2015.com/</p>
+                <a href="#" class="btn btn-primary">See Profile</a>
+            </div>-->
+            </div>
+        </div>
+        <p>1.小排500克焯水后，煮三十分钟，肉汤可以煮面条，别倒掉了。</p>
+        <p>2.用一汤匙料酒，一汤匙生抽，半汤匙老抽，二汤匙香醋（不是白醋）腌渍20分钟。</p>
+        <p>3.捞出洗净控水备用，炸制金黄，油别放多，可以省油，只要翻身的勤就好了。</p>
+        <p>4.锅内放排骨，腌排骨的水，三汤勺白糖（大胆的放糖吧，三汤匙，别怕多）。半碗肉汤大火烧开，调入半茶匙盐提味。</p>
+        <p>5.小火焖十分钟大火收汁，收汁的时候最后加一汤匙香醋，那个酸甜口就出来了。</p>
+        <p>6.临出锅撒葱花芝麻，少许味精。</p>
+
+        <!-- 
+        <div class="attachment-block clearfix">
+            <img class="attachment-img" src="/img/photo1.png" alt="Attachment Image">
+            <div class="attachment-pushed">
+                <h4 class="attachment-heading"><a href="javascript:void(0);">Lorem ipsum text generator</a></h4>
+                <div class="attachment-text">
+                    <p>
+                      Description about the attachment can be placed here. Lorem Ipsum is simply dummy text of the printing and typesetting industry... <a href="#">more</a>
+                    </p>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- 
+        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i> Share</button>
+        <button type="button" class="btn btn-default btn-sm"><i class="fa fa-thumbs-o-up"></i> Like</button>
+        <span class="float-right text-muted">127 likes - 3 comments</span>-->
+    </div>
+
+    <div class="card-body" style="border-left: 5px solid rgb(255, 70, 10);">
+        <a data-submenu="#footMenuList002" class="common-pointer">2.西红柿炒鸡蛋</a>
+    </div>
+    <div class="card-body" id="footMenuList002" style="display:none;border: 1px solid rgb(255, 70, 10);">
+        <div class="card-group common-mb-2">
+            <div class="card">
+            <img class="card-img-top" src="/img/food/footMenuList002.jpg" alt="Card image" style="max-height:450px;">
+            <div class="card-body">
+                <!--<h4 class="card-title" style="color:rgb(255, 70, 10)">注意</h4>-->
+                <p class="card-text" style="color:rgb(255, 70, 10)">注意，西红柿炒鸡蛋不用放鸡精或者味精</p>
+                <p>1。西红柿切成块，要大小不一，什么形状无所谓，鸡蛋打开放入碗中，打匀，放入少许的盐。</p>
+                <p>2。 锅内放入适量(炒鸡蛋的时候，油放多少很关键，我的经验是放相当于鸡蛋液的2/3)的油，等油热了的时候，(我后面详细讲如何判断油的温度)，倒入鸡蛋 液，注意这个时候，鸡蛋液会自然的凝固，不要动，等到这个鸡蛋液都凝固的时候(要小心油干了，造成鸡蛋糊了)，用饭铲(也叫炒勺)从鸡蛋的边缘轻轻进入， 将鸡蛋翻过来，煎一下，等两面的颜色都呈现金黄的颜色时候，把鸡蛋从锅里取出来(也可以不取，不过等熟练以后再说吧)，这个时候锅里面应该还有一些油，把 西红柿翻进去，翻炒几下，由于西红柿里面含有大量的水分，会有水份析出，这个时候把炒好的鸡蛋放进去，放入少许盐，翻炒几下，出锅。PS：有人喜欢做的时 候，放一些水进去，本人不推荐，其实西红柿里的水份完全够用了，不用放水。还有，现在的西红柿质量不好，炒出来的菜不甜还有些苦味，出锅的时候可以适量放 一些白糖。</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body" style="border-left: 5px solid rgb(255, 180, 10);">
+        <a data-submenu="#footMenuList003" class="common-pointer">3.川味鱼香肉丝</a>
+    </div>
+    <div class="card-body" id="footMenuList003" style="display:none;border: 1px solid rgb(255, 180, 10);">
+        <div class="card-group common-mb-2">
+            <div class="card">
+            <img class="card-img-top" src="/img/food/footMenuList003.jpg" alt="Card image" style="max-height:450px;">
+            <div class="card-body">
+                <p>1，先将猪肉切丝，用一点点生粉拌均备用；</p>
+                <p>2，葱白以及淡绿色的部分切一厘米左右的段；</p>
+                <p>3，泡姜，泡辣椒，蒜切碎；</p>
+                <p>4，香醋，白糖，少许生粉拌均备用；</p>
+                <p>5，锅里热油，下肉丝划散变色后盛起；</p>
+                <p>6，锅里剩下的油爆香姜，蒜和泡椒，然后下郫县豆瓣炒香，再下肉丝翻炒均匀；</p>
+                <p>7，下葱段翻炒一下之后，倒入准备好的糖醋汁，翻炒均匀，尝尝味道做最后调整，如果觉得不够咸可以适当加盐，装盘。</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+

@@ -1,0 +1,39 @@
+<div class="card card-blog">
+    <div class="card-header">
+        <h3 class="card-title">ヘルプ</h3>
+    </div>
+    <div class="card-body" style="border-left: 5px solid rgb(255, 180, 10);">
+        <a data-submenu="#footMenuList003" class="common-pointer">1.開発環境</a>
+    </div>
+    <div class="card-body" id="footMenuList003" style="border: 1px solid rgb(255, 180, 10);">
+        <p>1，クライアントでHTML5&nbsp;+&nbsp;BackboneJs&nbsp;+&nbsp;RequireJs&nbsp;+&nbsp;JqueryJs&nbsp;+&nbsp;VelcityJsです。</p>
+        <p>2，サーバーでPHP７です。</p>
+        <p>3，DBでMySqlです。</p>
+    </div>
+    <div class="card-body" style="border-left: 5px solid rgb(255, 180, 10);">
+        <a data-submenu="#footMenuList003" class="common-pointer">1.SPA構成（クライアント）</a>
+    </div>
+    <div class="card-body" id="footMenuList003" style="border: 1px solid rgb(255, 180, 10);">
+        <p>AppView = NavView + HomeView + OtherView</p>
+        <p>
+            BaseViewビュー:<br/>
+            ・画面遷移:画面ID、URL(パラメタ付け可能)により、画面遷移を行う。<br/>
+            ・ダイアログ表示<br/>
+            ・サーバーと通信
+        </p>
+        <p>ビュー：AppView<-BaseView</p>
+        <p>ビュー：NavView<-BaseView</p>
+        <p>ビュー：CarouselView<-BaseView</p>
+        <p>ビュー：DialogView<-BaseView</p>
+        <p>ビュー：EditView<-BaseView</p>
+        <p>ビュー：ListView<-BaseView</p>
+        <p>ビュー：CardView<-BaseView</p>
+        <p>共通関数</p>
+    </div>
+
+
+</div>
+
+
+
+

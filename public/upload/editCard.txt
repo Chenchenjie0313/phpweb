@@ -1,0 +1,43 @@
+<form action="/" role="form" method="post" id="editCard">
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">編集&nbsp;&nbsp;&nbsp;&nbsp;<br/><span id="blog_msg" data-return-msg="form"></span></h3>
+  </div>
+  <!-- /.card-header -->
+  <div class="card-body">
+      <!-- text input -->
+      <div class="form-group">
+        <div class="input-group">
+          <input type="number" name="id" placeholder="id ..." class="form-control">
+          <span class="input-group-append"><button type="button" class="btn btn-warning" data-fetch="commonUploadBtn" data-formid='editCard' data-url="/?action=setting&method=showEdit" >Get</button></span>
+        </div>
+      </div>
+      <div class="form-group">
+          <label>タイプ(必須)</label>
+          <select name="type" class="form-control">
+            <option value="">入力しくください。</option>
+            <option value="1">Java</option>
+            <option value="2">JavaScript/CSS</option>
+            <option value="3">Oracle</option>
+            <option value="4">ES6</option>
+            <option value="99">その他</option>
+          </select>
+      </div>
+      <!-- text input -->
+      <div class="form-group">
+        <label>タイトル(必須)</label>
+        <input type="text" class="form-control" placeholder="Enter title..." name="title" id="blog_title">
+      </div>
+      <!-- textarea -->
+      <div class="form-group">
+        <label>コンテンツ(必須)</label>
+        <textarea class="form-control" rows="3" placeholder="Enter content..." id="blog_edit"  name="edit"></textarea>
+      </div>
+
+  </div>
+  <!-- /.card-body -->
+  <div class="card-footer">
+    <a class="btn btn-primary" data-fetch="commonUploadBtn" data-formid='editCard' data-url="/?action=setting&method=saveToTemplet">OK</a>
+  </div>
+</div>
+</form>

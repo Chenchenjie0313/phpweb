@@ -1,0 +1,11 @@
+<div class="card card-blog">
+    <div class="card-header">
+        <h3 class="card-title">リンク</h3>
+    </div>
+    <div class="card-body" style="border-left: 5px solid rgb(255, 180, 10);">
+        <a class="common-pointer badge badge-warning" href="https://www.google.co.jp" target="_blank">Google</a>
+        <a class="common-pointer badge badge-warning" href="https://m.biquge.info/10_10582/" target="_blank">三寸人间</a>
+        <a class="common-pointer badge badge-warning" href="http://m.xbiquge.la/wapbook/15409.html" target="_blank">牧神记</a>
+
+    </div>
+</div>

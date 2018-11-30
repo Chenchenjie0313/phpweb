@@ -8,16 +8,16 @@
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="/img/work/java.jpg" alt="First slide">
+            <img class="d-block w-100" src="<?= View::img('car_h_001.jpg'); ?>" alt="First slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="/img/work/oracle.jpg" alt="First slide">
+            <img class="d-block w-100" src="<?= View::img('car_h_001.jpg'); ?>" alt="First slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="/img/work/javascript.jpg" alt="First slide">
+            <img class="d-block w-100" src="<?= View::img('car_h_001.jpg'); ?>" alt="First slide">
           </div>
           <div class="carousel-item clone">
-            <img class="d-block w-100" src="/img/work/java.jpg" alt="First slide">
+            <img class="d-block w-100" src="<?= View::img('car_h_001.jpg'); ?>" alt="First slide">
           </div>
         </div>
 

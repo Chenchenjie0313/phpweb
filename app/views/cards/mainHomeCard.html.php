@@ -9,21 +9,21 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <a href="javascript:void(0);" data-operation-id="showEditCard" data-operation-url='/templete/footMenuList.txt' data-operation-pageid='footMenuList'>
-                <img class="d-block w-100" src="/img/food/001.jpg" alt="First slide">
+                <img class="d-block w-100" src="<?= View::img('car_h_001.jpg'); ?>" alt="First slide">
             </a>
           </div>
           <div class="carousel-item">
             <a href="javascript:void(0);" data-operation-id="showEditCard" data-operation-url='/templete/footMenuList.txt' data-operation-pageid='footMenuList'>
-                <img class="d-block w-100" src="/img/food/002.jpg" alt="Second slide">
+                <img class="d-block w-100" src="<?= View::img('car_h_002.jpg'); ?>" alt="Second slide">
             </a>
           </div>
           <div class="carousel-item">
             <a href="javascript:void(0);" data-operation-id="showEditCard" data-operation-url='/templete/footMenuList.txt' data-operation-pageid='footMenuList'>
-                <img class="d-block w-100" src="/img/food/003.jpg" alt="Third slide">
+                <img class="d-block w-100" src="<?= View::img('car_h_003.jpg'); ?>" alt="Third slide">
             </a>
           </div>
           <div class="carousel-item clone">
-            <img class="d-block w-100" src="/img/food/001.jpg" alt="First slide">
+            <img class="d-block w-100" src="<?= View::img('car_h_001.jpg'); ?>" alt="First slide">
           </div>
         </div>
 
@@ -72,7 +72,7 @@
         <div class="text">
           <div class="card-group common-mb-2">
             <div class="card">
-            <img class="card-img-top" src="/img/chair/A011.jpg" alt="Card image">
+            <img class="card-img-top" src="<?= View::img('a-002.jpg'); ?>" alt="Card image">
             <div class="card-body">
                 <h4 class="card-title"></h4>
                 <p class="card-text"></p>
@@ -80,7 +80,7 @@
             </div>
             </div>
             <div class="card">
-            <img class="card-img-top" src="/img/chair/B008.jpg" alt="Card image">
+            <img class="card-img-top" src="<?= View::img('a-003.jpg'); ?>" alt="Card image">
             <div class="card-body">
                 <h4 class="card-title"></h4>
                 <p class="card-text"></p>
@@ -88,7 +88,7 @@
             </div>
             </div>
             <div class="card">
-            <img class="card-img-top" src="/img/chair/A015.jpg" alt="Card image">
+            <img class="card-img-top" src="<?= View::img('a-001.jpg'); ?>" alt="Card image">
             <div class="card-body">
                 <h4 class="card-title"></h4>
                 <p class="card-text"></p>
@@ -106,7 +106,7 @@
         <div class="text">
           <div class="card-deck common-mb-2">
             <div class="card">
-            <img class="card-img-top" src="/img/food/001.jpg" alt="Card image">
+            <img class="card-img-top" src="<?= View::img('car_a_001.jpg'); ?>" alt="Card image">
             <div class="card-body">
                 <h4 class="card-title"></h4>
                 <p class="card-text"></p>
@@ -114,7 +114,7 @@
             </div>
             </div>
             <div class="card">
-            <img class="card-img-top" src="/img/food/002.jpg" alt="Card image">
+            <img class="card-img-top" src="<?= View::img('car_a_002.jpg'); ?>" alt="Card image">
             <div class="card-body">
                 <h4 class="card-title"></h4>
                 <p class="card-text"></p>
@@ -122,7 +122,7 @@
             </div>
             </div>
             <div class="card">
-            <img class="card-img-top" src="/img/food/003.jpg" alt="Card image">
+            <img class="card-img-top" src="<?= View::img('car_a_004.jpg'); ?>" alt="Card image">
             <div class="card-body">
                 <h4 class="card-title"></h4>
                 <p class="card-text"></p>

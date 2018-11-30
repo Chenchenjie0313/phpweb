@@ -1,0 +1,33 @@
+<div class="card cardList002">
+  <div class="card-header">
+    <h3 class="card-title"><%- title %></h3>
+    <div class="card-tools">
+      <span class="badge badge-warning"><%= list ? list.length : 0 %></span>
+    </div>
+  </div><!-- /.card-header -->
+  <div class="card-body list-style">
+    <div class="ul-list">
+        <% _.each(list, function(item , index) { %> 
+
+            <div class="item-style-003 li-item-left">
+              <img class="img" src="/img/user-4.png" alt="message user image">
+              <div class="text">
+                <a href="javascript:void(0);" data-pageid="showEditPriviewCard_<%=item['id']%>" data-url="/?id=<%=item['id']%>&type=<%=item['type']%>&dataType=html&action=show&method=preview">
+                  <%- index+1 %>.<%- item['text'] %>
+                </a>
+              </div>
+            </div>
+
+        <% })%>
+    </div>
+  </div><!-- /.card-body -->
+
+  <div class="card-footer">
+    <form action="#" method="post">
+      <div class="input-group">
+        <span class="input-group-append"><button type="button" class="btn btn-warning" data-historyback="true" data-pageid="back" >戻る</button></span>
+      </div>
+    </form>
+  </div>
+</div>
+            

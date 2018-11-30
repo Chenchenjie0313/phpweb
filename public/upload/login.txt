@@ -1,0 +1,25 @@
+<form action="/" role="form" method="post" id="loginForm">
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">ログイン&nbsp;&nbsp;&nbsp;&nbsp;<br/><span data-return-msg="form"></span></h3>
+  </div>
+  <!-- /.card-header -->
+  <div class="card-body">
+      <!-- text input -->
+      <div class="form-group">
+        <label for="login_id">ID：</label>
+        <input type="text" class="form-control" placeholder="Enter ..." name="id" id="login_id">
+      </div>
+      <!-- textarea -->
+      <div class="form-group">
+        <label for="login_pwd">パスワード：</label>
+        <input type="password" class="form-control" placeholder="Enter ..." name="password" id="login_pwd">
+      </div>
+  </div>
+  <!-- /.card-body -->
+  <div class="card-footer">
+    <a class="btn btn-primary" data-fetch="commonUploadBtn" data-formid='loginForm' data-url="/?action=setting&method=login" >ログイン</a>
+  </div>
+</div>
+<input type="hidden" name="type" value="1" id="blog_type">
+</form>
