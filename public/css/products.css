@@ -1,0 +1,970 @@
+@charset "UTF-8";
+
+/*
+ * product.css
+ *
+ */
+
+/* index
+---------------------------------------------------------- */
+#product #categoryVisual {
+/*background-image: url(../../img/product/product-visual.jpg);*/
+}
+
+.boxLinksIndex h2 {
+height: 3em;
+margin-bottom: 1em;
+}
+
+#product .boxLinksIndex-item {
+margin-bottom: 0em;
+}
+
+#product a.btn-activities {
+border: 2px solid #007aff;
+padding: 0.8em;
+width: 100%;
+display: block;
+text-align: center;
+position: relative;
+font-size: 24px;
+color: #000000;
+border-radius: 2px;
+}
+
+.bx-wrapper {
+position: relative;
+*zoom: 1;
+text-align: center;
+margin-bottom: 50px;
+}
+
+.bx-wrapper img {
+max-width: 100%;
+display: block;
+margin-bottom: 0px;
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+position: absolute;
+width: 100%;
+}
+
+.bx-wrapper .bx-loading {
+min-height: 50px;
+background: url(../../img/index/bx_loader.gif) center center no-repeat #fff;
+height: 100%;
+width: 100%;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 2000;
+}
+
+.bx-wrapper .bx-pager {
+text-align: center;
+font-weight: bold;
+font-family: Arial;
+padding-top: 20px;
+height: 50px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+display: inline-block;
+*zoom: 1;
+*display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+text-indent: -9999px;
+display: block;
+width: 10px;
+height: 10px;
+margin: 0px 5px 0;
+outline: 0;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+border-radius: 0px;
+background-color: #c5c8d0;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+background: #007aff;
+}
+
+.bx-wrapper .bx-controls-direction a {
+position: absolute;
+top: 50%;
+margin-top: 0px;
+outline: 0;
+width: 60px;
+height: 91px;
+text-indent: -9999px;
+z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+display: none;
+}
+
+ul#tab {
+display: table;
+border-bottom: 5px solid #007AFF;
+width: 100%;
+margin-top: -2em;
+}
+
+ul#tab li {
+display: table-cell;
+}
+
+ul#tab li a,
+ul#tab h3 {
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+padding-top: 5px;
+border-top-left-radius: 2px;
+border-top-right-radius: 2px;
+height: 3.8em; /* 20180221 3.6em */
+font-weight: bold;
+font-size: 17px;
+width: 326px;
+}
+
+ul#tab h3 {
+background-color: #007aff;
+color: #FFFFFF !important;
+text-decoration: none;
+}
+
+ul#tab br {
+display: none;
+}
+
+ul#tab a.tab-item-1,
+ul#tab a.tab-item-2 {
+background-color: #f8f8f8;
+}
+
+ul#tab .tab-item-3 { /* 20160225 */
+/* vertical-align: top;
+padding-top: 0.2em; 20180612 */
+}
+
+ul#tab a:hover{
+	background-color: #F2F8FC;
+	}
+
+ul#tab input[type="text"] {
+width: 250px;
+padding-left: 11px;
+color: #999999;
+float: left;
+height: 40px;
+/* 20180221
+padding-right: 11px;
+border-radius: 2px 0px 0px 2px;
+border: 1px solid #d6d3d3;
+line-height: 35px;
+margin-top: 5px;
+*/
+}
+
+/* 20180221 del
+ul#tab form {
+ul#tab input[type="image"] {
+ul#tab input[type="text"]:focus{
+*/
+
+ul#nameList{}
+ul#nameList li a{
+background-color: #007aff;
+width: 66px;
+float: left;
+text-align: center;
+display: block;
+margin-right: 10px;
+margin-bottom: 10px;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+border-radius: 2px;
+color: #FFFFFF;
+}
+
+ul#nameList li a:hover{
+background-color: #F2F8FC;
+}
+
+ul#nameList li:nth-child(13) a,
+ul#nameList li:nth-child(26) a{margin-right: 0px;}
+
+/* 20160324 */
+ul.linkList {
+margin-top: -2.8em;
+}
+
+
+/* Box-tableLinks2
+---------------------------------------------------------- */
+.boxTableLinks2 {
+width: 100%;
+display: block;
+border-top: 1px solid #e5e5e5;
+}
+
+.boxTableLinks2 li {
+width: 25%;
+float: left;
+border-right: 1px solid #e5e5e5;
+border-bottom: 1px solid #e5e5e5;
+position: relative;
+}
+
+.boxTableLinks2 li a:hover {
+background-color: #F2F8FC;
+color: #2EC5DF !important;
+text-decoration: underline;
+}
+
+.boxTableLinks2 li:nth-child(4n) {
+border-right-style: none;
+}
+
+.boxTableLinks2 a {
+display: block;
+padding-left: 1.3em;
+padding-top: 1em;
+}
+
+.boxTableLinks2 h4 {
+height: 2.5em;
+font-size: 16px;
+font-weight: 400;
+position: relative;
+margin-bottom: 1em;
+margin-right: 0px;
+padding-right: 20px;
+}
+
+.boxTableLinks2 h5 {
+color: #000000;
+font-size: 14px;
+font-weight: normal;
+padding-right: 20px;
+}
+
+.boxTableLinks2 h6 {
+color: #999999;
+font-size: 14px;
+font-weight: normal;
+padding-right: 20px;
+padding-bottom: 10px;
+}
+
+#productSeek {
+display: none;
+}
+
+/* Box-tableLinks3
+---------------------------------------------------------- */
+h3.nameListTtl{
+background-color: #d2d7e4;
+color: #0a2986;
+padding-left: 1em;
+padding-top: 0.3em;
+padding-bottom: 0.3em;
+font-size: 16px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.boxTableLinks3 {
+width: 100%;
+display: block;
+border-top: 1px solid #e5e5e5;
+}
+
+.boxTableLinks3 li {
+width: 25%;
+float: left;
+border-right: 1px solid #e5e5e5;
+border-bottom: 1px solid #e5e5e5;
+font-size: 12px;
+display: table;
+}
+
+.boxTableLinks3 li:nth-child(4n) {
+border-right-style: none;
+}
+
+.boxTableLinks3 a {
+display: table-cell;
+padding-right: 30px;
+padding-left: 1.3em;
+height: 60px;
+vertical-align: middle;
+}
+
+
+/* old css
+---------------------------------------------------------- */
+#main_contents h3 {
+margin-bottom: 20px;
+}
+
+.title_middle {
+background: url(../../img/common/title_middle.gif) no-repeat 0 bottom; /* 20160127 url(../../img/old_img/title_middle.gif)*/
+padding: 2px 0 8px 20px; /* 20160127 padding: 5px 0 8px 20px;*/
+font-size: 133%!important;
+line-height: 130%;
+}
+
+.table1 {
+border-top: 1px solid #aaa;
+border-right: 1px solid #aaa;
+font-size: 100%;
+width: 100%;
+box-sizing:border-box!important;/* 20160127 */
+}
+
+.table1 th {
+border-bottom: 1px solid #aaa;
+border-left: 1px solid #aaa;
+background: #d9e6ec;
+padding: 10px;
+font-weight: bold;
+}
+
+.table1 td {
+border-bottom: 1px solid #aaa;
+border-left: 1px solid #aaa;
+padding: 10px;
+}
+
+/* hdr-Block：ADD 2016/12/13
+---------------------------------------------------------- */
+
+/* プロダクトリスト ヘッダ */
+.hdr-Block .product-index-h-ttl01 {
+background-color: #048136;
+border-top: 5px solid #015d19;
+color: #FFFFFF;
+vertical-align: middle;
+padding: 0.5em 2.5%; /* 20180221 padding: 0.8em 2.5%; */
+font-size: 38px;
+line-height: 1.3em;
+}
+
+.hdr-Block .product-index-h-ttl01 img {
+margin-right: 0.3em;
+}
+
+.hdr-Block .product-index-h-ttl02 {
+background-color: #349b4f;
+line-height: 1.3em;
+vertical-align: middle;
+padding: 1.2em 2.5%; /* 20180221 padding: 1.5em 2.5%; */
+color: #FFFFFF;
+border-bottom: 5px solid #86c496;
+margin-bottom: 0px!important;
+font-size: 18px;
+}
+
+.hdr-Block .product-index-h-ttl03 {
+background-color: #e2f1e6;
+line-height: 1.3em;
+vertical-align: middle;
+padding: 1.2em 2.5%;
+color: #048136;
+}
+
+/* タグ */
+.tag-list li a {
+display: inline-block;
+background-color: #f1f1f1;
+border-radius: 100px;
+padding: 0.3em 1.1em;
+float: left;
+margin-right: 0.5em;
+line-height: 1.5em;
+margin-bottom: 0.5em;
+}
+
+.tag-list li a:hover {
+background-color: #048136;
+color: #FFFFFF !important;
+}
+
+.tag-list li.active a {
+background-color: #048136;
+color: #FFFFFF;
+font-size: 14px;
+}
+
+/*製品リスト*/
+.product-list {
+margin-right: -20px;
+}
+
+.product-list .item {
+width: 314px; /* 360px */
+float: left;
+margin-right: 20px;
+background-color: #f9f9f9;
+padding-bottom: 20px;
+margin-bottom: 20px;
+}
+.product-list .item:nth-child(3n) { /* 20180816 */
+margin-right: 0;
+}
+
+.product-list .item h4.arw01 {
+display: block;
+background-color: #038136;
+background-image: url(../../img/arw-w.png);
+margin-bottom: 10px; /* 20180221 20px */
+}
+
+.product-list .item .arw01 a {
+width: 360px;
+color: #FFFFFF !important;
+padding-right: 1.1em;
+padding-left: 20px;
+display: table-cell;
+height: 70px;
+vertical-align: middle;
+line-height: 1.3em;
+}
+
+.product-list .item h5,
+.product-list .item p {
+padding-right: 20px;
+padding-left: 20px;
+padding-bottom: 0.5em; /* 20180221 1em */
+}
+/* 20180221
+.product-list .item p {
+color: #999999;
+}
+*/
+
+
+/**** 基幹システム *******************************************/
+.keyword01 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #024871; /* 1 */
+background-color: #035a8d; /* 2 */
+
+}
+.keyword01 .hdr-Block .product-index-h-ttl02 {
+background-color: #1c8dd1; /* 3 */
+border-bottom-color: #75b4da; /* 4 */
+}
+.keyword01 .hdr-Block .product-index-h-ttl03 {
+background-color: #b9d8ea; /* 5 */
+color: #035a8d; /* 2と同じ */
+}
+.keyword01 .product-list .item h4.arw01 {
+background-color: #035a8d; /* 2 */
+}
+/**** システム構築・スクラッチ開発 *******************************************/
+.keyword02 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #142b00; /* 1 */
+background-color: #224b00; /* 2 */
+
+}
+.keyword02 .hdr-Block .product-index-h-ttl02 {
+background-color: #3d8601; /* 3 */
+border-bottom-color: #71af3e; /* 4 */
+}
+.keyword02 .hdr-Block .product-index-h-ttl03 {
+background-color: #95BE73; /* 5 */
+color: #224b00; /* 2と同じ */
+}
+.keyword02 .product-list .item h4.arw01 {
+background-color: #224b00; /* 2 */
+}
+/**** クラウドサービス *******************************************/
+.keyword03 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #601b00; /* 1 */
+background-color: #852600; /* 2 */
+
+}
+.keyword03 .hdr-Block .product-index-h-ttl02 {
+background-color: #c93e07; /* 3 */
+border-bottom-color: #f18e66; /* 4 */
+}
+.keyword03 .hdr-Block .product-index-h-ttl03 {
+background-color: #ffcebb; /* 5 */
+color: #852600; /* 2と同じ */
+}
+.keyword03 .product-list .item h4.arw01 {
+background-color: #852600; /* 2 */
+}
+/**** アウトソーシングサービス ボツ *******************************************/
+.keyword04 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #936300; /* 1 */
+background-color: #b57b00; /* 2 */
+
+}
+.keyword04 .hdr-Block .product-index-h-ttl02 {
+background-color: #ffb925; /* 3 */
+border-bottom-color: #ffdb8f; /* 4 */
+}
+.keyword04 .hdr-Block .product-index-h-ttl03 {
+background-color: #fff2d6; /* 5 */
+color: #b57b00; /* 2と同じ */
+}
+.keyword04 .product-list .item h4.arw01 {
+background-color: #b57b00; /* 2 */
+}
+/**** アウトソーシングサービス  *******************************************/
+.keyword04 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #79242f; /* 1 */
+background-color: #a20025; /* 2 */
+
+}
+.keyword04 .hdr-Block .product-index-h-ttl02 {
+background-color: #ea002a; /* 3 */
+border-bottom-color: #ff9cb2; /* 4 */
+}
+.keyword04 .hdr-Block .product-index-h-ttl03 {
+background-color: #fcccd7; /* 5 */
+color: #a20025; /* 2と同じ */
+}
+.keyword04 .product-list .item h4.arw01 {
+background-color: #a20025; /* 2 */
+}
+
+/**** ネットワーク・プラットフォーム  *******************************************/
+.keyword05 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #007162; /* 1 */
+background-color: #008b78; /* 2 */
+
+}
+.keyword05 .hdr-Block .product-index-h-ttl02 {
+background-color: #29bba7; /* 3 */
+border-bottom-color: #88dacf; /* 4 */
+}
+.keyword05 .hdr-Block .product-index-h-ttl03 {
+background-color: #d2efeb; /* 5 */
+color: #008b78; /* 2と同じ */
+}
+.keyword05 .product-list .item h4.arw01 {
+background-color: #008b78; /* 2 */
+}
+/**** サプライチェーン  *******************************************/
+.keyword06 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #be0073; /* 1 */
+background-color: #da0687; /* 2 */
+
+}
+.keyword06 .hdr-Block .product-index-h-ttl02 {
+background-color: #e85eb2; /* 3 */
+border-bottom-color: #facce8; /* 4 */
+}
+.keyword06 .hdr-Block .product-index-h-ttl03 {
+background-color: #fffbfd; /* 5 */
+color: #da0687; /* 2と同じ */
+}
+.keyword06 .product-list .item h4.arw01 {
+background-color: #da0687; /* 2 */
+}
+/**** モノづくり・設計システム  *******************************************/
+.keyword07 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #42068f; /* 1 */
+background-color: #5708b9; /* 2 */
+
+}
+.keyword07 .hdr-Block .product-index-h-ttl02 {
+background-color: #8644da; /* 3 */
+border-bottom-color: #c4a3ed; /* 4 */
+}
+.keyword07 .hdr-Block .product-index-h-ttl03 {
+background-color: #ece2f9; /* 5 */
+color: #5708b9; /* 2と同じ */
+}
+.keyword07 .product-list .item h4.arw01 {
+background-color: #5708b9; /* 2 */
+}
+/**** マーケティング・セールスシステム ボツ  *******************************************/
+.keyword08 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #803f00; /* 1 */
+background-color: #a45100; /* 2 */
+
+}
+.keyword08 .hdr-Block .product-index-h-ttl02 {
+background-color: #ff7f00; /* 3 */
+border-bottom-color: #ffbc7a; /* 4 */
+}
+.keyword08 .hdr-Block .product-index-h-ttl03 {
+background-color: #ffe1c4; /* 5 */
+color: #a45100; /* 2と同じ */
+}
+.keyword08 .product-list .item h4.arw01 {
+background-color: #a45100; /* 2 */
+}
+/**** マーケティング・セールスシステム  *******************************************/
+.keyword08 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #803f00; /* 1 */
+background-color: #e65400; /* 2 */
+
+}
+.keyword08 .hdr-Block .product-index-h-ttl02 {
+background-color: #ff7f00; /* 3 */
+border-bottom-color: #ffbc7a; /* 4 */
+}
+.keyword08 .hdr-Block .product-index-h-ttl03 {
+background-color: #ffe1c4; /* 5 */
+color: #e65400; /* 2と同じ */
+}
+.keyword08 .product-list .item h4.arw01 {
+background-color: #e65400; /* 2 */
+}
+
+/**** WEB・映像・通信技術  *******************************************/
+.keyword09 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #665100; /* 1 */
+background-color: #8c6f00; /* 2 */
+
+}
+.keyword09 .hdr-Block .product-index-h-ttl02 {
+background-color: #d3a803; /* 3 */
+border-bottom-color: #f7d967; /* 4 */
+}
+.keyword09 .hdr-Block .product-index-h-ttl03 {
+background-color: #fff0b7; /* 5 */
+color: #8c6f00; /* 2と同じ */
+}
+.keyword09 .product-list .item h4.arw01 {
+background-color: #8c6f00; /* 2 */
+}
+/**** グループウエア・業務管理 ボツ  *******************************************/
+.keyword10 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #030356; /* 1 */
+background-color: #080871; /* 2 */
+
+}
+.keyword10 .hdr-Block .product-index-h-ttl02 {
+background-color: #1717ae; /* 3 */
+border-bottom-color: #6060bd; /* 4 */
+}
+.keyword10 .hdr-Block .product-index-h-ttl03 {
+background-color: #9e9ed2; /* 5 */
+color: #080871; /* 2と同じ */
+}
+.keyword10 .product-list .item h4.arw01 {
+background-color: #080871; /* 2 */
+}
+/**** グループウエア・業務管理  *******************************************/
+.keyword10 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #030356; /* 1 */
+background-color: #1226aa; /* 2 */
+
+}
+.keyword10 .hdr-Block .product-index-h-ttl02 {
+background-color: #0050ef; /* 3 　1b3bc2*/
+border-bottom-color: #9eaee5; /* 4 */
+}
+.keyword10 .hdr-Block .product-index-h-ttl03 {
+background-color: #cbd2eb; /* 5 */
+color: #1226aa; /* 2と同じ */
+}
+.keyword10 .product-list .item h4.arw01 {
+background-color: #1226aa; /* 2 */
+}
+
+/**** セキュリティー・ガバナンス  *******************************************/
+.keyword11 .hdr-Block .product-index-h-ttl01 {
+border-top-color: #3a4300; /* 1 */
+background-color: #5b6900; /* 2 */
+
+}
+.keyword11 .hdr-Block .product-index-h-ttl02 {
+background-color: #95ab00; /* 3 */
+border-bottom-color: #c3d54b; /* 4 */
+}
+.keyword11 .hdr-Block .product-index-h-ttl03 {
+background-color: #e7f29d; /* 5 */
+color: #5b6900; /* 2と同じ */
+}
+.keyword11 .product-list .item h4.arw01 {
+background-color: #5b6900; /* 2 */
+}
+
+/**** 業種  *******************************************/
+div#main_contents2[class^="business"] .hdr-Block .product-index-h-ttl01{
+border-top-color: #3f3a60; /* 1 */
+background-color: #595478; /* 2 */
+
+}
+div#main_contents2[class^="business"] .hdr-Block .product-index-h-ttl02 {
+background-color: #8d89a4; /* 3 */
+border-bottom-color: #b3b0c4; /* 4 */
+}
+div#main_contents2[class^="business"] .hdr-Block .product-index-h-ttl03 {
+background-color: #d9d7df; /* 5 */
+color: #595478; /* 2と同じ */
+}
+div#main_contents2[class^="business"] .product-list .item h4.arw01 {
+background-color: #595478; /* 2 */
+}
+
+
+
+/**** 業種・キーワード一覧　共通  *******************************************/
+div#main_contents2 .product-list .item h4.arw01:hover {
+opacity: 0.8;
+-webkit-transition: all .2s ease;
+transition: all .2s ease;
+}
+
+
+
+/* -------------------------------------------------------------------------*/
+@media screen and (max-width:767px) {
+
+#product .boxLinksIndex h2 {
+margin-bottom: 0.5em;
+}
+
+#product .boxLinksIndex-item {
+margin-bottom: 2em;
+}
+
+#product a.btn-activities {
+font-size: 17px;
+background-color: #FFFFFF;
+padding-top: 1.5em;
+padding-bottom: 1.5em;
+}
+
+.boxTableLinks2 {
+background-color: #FFFFFF;
+}
+
+.boxTableLinks2 li {
+width: 50%;
+margin-right: 0px;
+background-color: #FFFFFF;
+}
+
+.boxTableLinks2 li:nth-child(odd) {
+margin-left: 0px;
+float: left;
+}
+
+.boxTableLinks2 li:nth-child(even) {
+float: right;
+margin-right: 0px;
+border-right-style: none;
+}
+
+.tab-sitem-3{
+  display: none !important
+}
+ 
+ul#tab {
+display: table;
+border-bottom: 5px solid #007AFF;
+width: 100%;
+margin-top: -2em;
+}
+
+ul#tab li,
+ul#tab h3 {
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+padding-top: 5px;
+border-top-left-radius: 2px;
+border-top-right-radius: 2px;
+height: 4.3em;
+font-weight: bold;
+font-size: 15px;
+}
+
+ul#tab h3 {
+background-color: #007aff;
+color: #FFFFFF !important;
+text-decoration: none;
+white-space: nowrap;
+padding-left: 0.2em;
+padding-right: 0.2em;
+}
+
+ul#tab h3 br {
+display: block;
+}
+
+ul#tab a.tab-item-1,
+ul#tab a.tab-item-2 {
+background-color: #FFFFFF;
+font-size: 15px;
+height: 4.3em;
+line-height: 1.3;
+}
+
+ul#tab .tab-item-3 {
+display: none;
+}
+
+#productSeek {
+display: block;
+padding: 0px;
+margin-bottom: 2em;
+}
+
+#productSeek form {
+display: block;
+text-align: left;
+margin-left: auto;
+margin-right: auto;
+}
+
+#productSeek input[type="text"] {
+width: 85% !important;
+padding-right: 0.5em;
+padding-left: 0.5em;
+color: #999999;
+float: left;
+border-radius: 2px 0px 0px 2px;
+border: 1px solid #d6d3d3;
+font-size: 16px;
+}
+#productSeek input.productseek-txt{
+height: 50px !important;
+}
+#productSeek input[type="image"] {
+width: 15% !important;
+padding: 1.5em 14px !important;
+background-color: #0A2986 !important;
+border-radius: 0 5px 5px 0 !important;
+float: none !important;
+height: 50px !important;
+background-image: url(../../img/btn_search_2x.png) !important;
+background-size: auto 50%;
+background-repeat: no-repeat;
+background-position: center center;
+}
+#productSeek input[type="text"]:focus{
+outline: 0;
+color: #000000 !important;
+}
+ 
+.boxTableLinks2 a {
+padding-left: 0.5em;
+}
+
+ul#tab br {
+display: block;
+}
+
+ul#nameList{}
+ul#nameList li a{
+background-color: #007aff;
+width: 14%;
+float: left;
+text-align: center;
+display: block;
+margin-right: 10px;
+margin-bottom: 10px;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+border-radius: 2px;
+color: #FFFFFF;
+}
+
+ul#nameList li:nth-child(13) a,
+ul#nameList li:nth-child(26) a{margin-right: 10px;}
+
+ul#nameList li:nth-child(6) a,
+ul#nameList li:nth-child(12) a,
+ul#nameList li:nth-child(18) a,
+ul#nameList li:nth-child(24) a,
+ul#nameList li:nth-child(30) a,
+ul#nameList li:nth-child(36) a{margin-right: 0px;}
+
+
+.boxTableLinks3 {
+width: 100%;
+display: block;
+border-top: 1px solid #e5e5e5;
+}
+
+.boxTableLinks3.arwList li{
+	width: 50%;
+}
+
+.boxTableLinks3.arwList li:nth-child(even) {
+border-right: 1px none #e5e5e5;
+}
+
+.boxTableLinks3 li:nth-child(4n) {
+border-right-style: none;
+}
+
+/* parts_product-index：ADD 2016/12/13
+---------------------------------------- */
+.hdr-Block .product-index-h-ttl01 {
+font-size: 30px;
+font-weight: normal;
+}
+
+.hdr-Block .product-index-h-ttl02 {
+font-size: 17px;
+font-weight: normal;
+padding-top: 1em;
+padding-bottom: 1em;
+}
+
+.hdr-Block .product-index-h-ttl03 {
+font-size: 13px;
+font-weight: normal;
+}
+
+.hdr-Block .product-index-h-ttl01 img {
+width: 40px;
+}
+
+.product-list {
+margin-right: 0px ;
+}
+
+.product-list .item {
+width: 100%;
+margin-right: 0px;
+height: auto !important;
+padding-bottom: 0px;
+}
+
+.product-list .item h4.arw01 {
+background-image: url(/img/arw-w_2x.png);
+background-size: 16px auto;
+background-position: right center;
+}
+
+} /* @media screen and (max-width:767px) */
+
+/* -------------------------------------------------------------------------*/
+@media screen and (max-width:320px) {
+
+.boxTableLinks2 h4 {
+height: 3em;
+font-size: 15px;
+padding-right: 15px;
+}
+
+.font16 {
+	font-size: 116% !important;
+}
+/* 20160120 */
+#main_contents{
+zoom: 52%;
+}
+
+/* 20160627 */
+ul#nameList li a{margin-right: 5px!important;}
+} /* @media screen and (max-width:320px) */

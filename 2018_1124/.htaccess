@@ -1,0 +1,33 @@
+RewriteEngine on
+RewriteBase /
+
+#################RewriteCond %{REQUEST_FILENAME} !-f
+#################RewriteCond %{REQUEST_FILENAME} !-d
+#################RewriteRule ^(.*)$ index.php [L,E=PATH_INFO1]
+
+
+RewriteRule !\.(txt|ico|js|gif|jpeg|jpg|png|css|swf|flv|html)$ index.php [L]
+
+################
+
+#RewriteCond %{REQUEST_URI} !(^¥/public¥/)(.+)$ [NC]
+#RewriteRule ^ /index.php [L]
+
+################
+################RewriteCond %{REQUEST_FILENAME} -d
+################RewriteRule ^ /index.php [L]
+#################RewriteRule ^(.*) /index.php [L]
+
+#RewriteCond %{REQUEST_URI} !^/public/*
+#RewriteRule ^ /index.php [L]
+
+
+#####存在していないフォルダ 最後文字列がスラッシュ 最スラッシュを削除する#####
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} (.+)/$
+#RewriteRule ^ %1 [N,R=301]
+
+#####Handle Front Controller...#####
+################RewriteCond %{REQUEST_FILENAME} !-d
+################RewriteCond %{REQUEST_FILENAME} !-f
+################RewriteRule ^ /index.php [L]
