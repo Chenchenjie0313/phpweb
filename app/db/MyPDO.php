@@ -87,6 +87,21 @@ class MyPDO extends PDO{
 
     }
 
+    /***
+     * 
+     */
+    public function execute(...$parmas){
+        Logger::log(__METHOD__.",行:".__LINE__, $parmas);
+        if (count($parmas) == 1){
+            $stmt = $this -> prepare($parmas[0]);
+            $stmt->execute();
+        } else {
+            $stmt = $this -> prepare($parmas[0]);
+            $stmt->execute($parmas[1]);
+        }
+        return $this;
+    }
+
 
 
     /***

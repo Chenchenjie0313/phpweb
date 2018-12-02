@@ -59,7 +59,7 @@ class View {
 
         $value = Request::create()->error($key);
         Logger::log(__METHOD__.",行:".__LINE__,"error : ",$key, $value);
-        if (!isset($value) || WString::isEmpty($value)){
+        if (!isset($value) || WString::anyEmpty($value)){
             return "";
         }
         return $pre.'<span style="color:red"><b>'.$value.'</b></span>'.$last;
@@ -143,16 +143,16 @@ class View {
      * 
      */
     public static function view($view){
-        Logger::log(__METHOD__.",行:".__LINE__, $view);
+        //Logger::log(__METHOD__.",行:".__LINE__, $view);
         $app = self::create();
         
         $s = WString::create($view);
         $arr = WArray::create($s->split('|'));
-        Logger::log(__METHOD__.",行:".__LINE__, $arr);
+        //Logger::log(__METHOD__.",行:".__LINE__, $arr);
 
         if ($arr->size() > 1){
             $app->viewArray = $arr;
-            if ( WString::isEmpty($arr->get(0)) ){
+            if ( WString::anyEmpty($arr->get(0)) ){
                 $app->includeFile("layouts,layout");
             } else {
                 $app->includeFile("layouts,".$arr->get(0));
@@ -173,10 +173,10 @@ class View {
         $this->once_head();
         $viewPath = BASE_WEB_ROOT.APP_SLASH.'app/views'.APP_SLASH.implode(APP_SLASH, WString::create($view)->split(',')) . '.html.php';
 		if (file_exists($viewPath)) {
-            Logger::log(__METHOD__.",行:".__LINE__, $viewPath);
+            //Logger::log(__METHOD__.",行:".__LINE__, $viewPath);
             include $viewPath;
         } else {
-            Logger::log(__METHOD__.",行:".__LINE__, "対象ビューがない。".$viewPath);
+            //Logger::log(__METHOD__.",行:".__LINE__, "対象ビューがない。".$viewPath);
             echo $view;
             echo $viewPath;
         }

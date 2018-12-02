@@ -71,11 +71,16 @@ class Dispatch {
                 Logger::log(__METHOD__.",行:".__LINE__, "コールバック関数", $forward);
                 $forward = call_user_func($forward);
             }
+            
+            Logger::log(__METHOD__.",行:".__LINE__, "コールバック関数", $forward);
+            $forward = WString::create($forward);
+            Logger::log(__METHOD__.",行:".__LINE__, "コールバック関数", $forward);
 
-            if (!WString::isEmpty($forward)){
+            if (!$forward->isEmpty()){
+                Logger::log(__METHOD__.",行:".__LINE__, "コールバック関数", $forward);
                 //アクションを呼び出するか
-                if (WString::create($forward)->match('/^(.+)@(.+)$/i')){
-                    $actionAndMethod = WString::create($forward)->split("@");
+                if ($forward->match('/^(.+)@(.+)$/i')){
+                    $actionAndMethod = $forward->split("@");
                     $returnVal = $this->invokeMethod($actionAndMethod[0],$actionAndMethod[1]);
                     if ($returnVal == null || $returnVal === false){
                         return false;
@@ -92,6 +97,9 @@ class Dispatch {
                         return false;
                     }
                 }
+                else if ($forward instanceof WString){
+                    return $forward->toString();
+                }
                 else {
                     return $forward;
                 }
@@ -99,8 +107,11 @@ class Dispatch {
             }
         } 
         //文字列の場合、そのまま返却
-        else if ($item != null && !WString::isEmpty($item)){
-            return $item;
+        else if ($item != null && is_string($item)){
+            $s = WString::create($item);
+            if (!$s->isEmpty()){
+                return $s->toString();
+            }
         }
         return false;
 
@@ -117,11 +128,11 @@ class Dispatch {
         //1.URLからパスを取得して、パスにより、ルートアイテムを取得する。
         $item = null;
         $uri = Request::create()->getUri();
-        if (!WString::isEmpty($uri)){
+        if (!WString::anyEmpty($uri)){
             $pathArray = WString::create($uri)->split(APP_SLASH);
             $realPath = "";
             foreach($pathArray as $path){
-                if (WString::isEmpty($path)){
+                if (WString::anyEmpty($path)){
                     continue;
                 } else if ($realPath == "") {
                     $realPath = $path;

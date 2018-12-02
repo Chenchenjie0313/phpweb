@@ -8,7 +8,8 @@ class SettingAction extends Action{
         parent::__construct();
         
     }
-    
+
+
     /**
      * 定数設定画面
      */
@@ -69,15 +70,23 @@ class SettingAction extends Action{
     }
 
     /**
+     * ファイルアップロードする。
+     * AJAXと想定する。
      * 
      */
-    public function uploadFile($_QUE){
+    public function uploadFile(){
+        Logger::log(__METHOD__.",行:".__LINE__, "ファイルアップロードする。");
 
-        //権限チェック
-        if(Utils::isAuth()==false){
-            Request::newInstance()->output("msg", '権限が足りない。')
-            ->output("statusCode", 99);
-            return Forward::createAjaxJson();
+        //ユーザがログインしているかどうか
+        if(Auth::isLogin()==false){
+            Error::add("header", 'ログインしてください。');
+            return ;
+        }
+
+        //入力チェック
+        $type = Input::get('type');
+        if ($type->isEmpty()){
+            Error::add("type", 'type is error。');
         }
 
         //アップロードできるファイル
@@ -97,7 +106,6 @@ class SettingAction extends Action{
         && in_array($extension, $allowedExts)) {
 
             if ($_FILES["file"]["error"] > 0) {
-                Utils::WriteLog('Error : LINE:' + __LINE__ + ' >> CLASS' + __CLASS__);
                 return [
                     statusCode => 99,
                     error => $_FILES["file"]
@@ -109,31 +117,17 @@ class SettingAction extends Action{
                 $var3 =  "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
                 $var4 =  "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
 
-                Utils::WriteLog($var1,$var2,$var3,$var4);
                 //ファイルをアップロードする。
                 if(FileHelper::fileUpload('file', $_SERVER['DOCUMENT_ROOT'] . '/upload') === true){
-                    //ファイルをDBに保存する。
-
-                    Request::newInstance()->output("msg", $_FILES["file"]["name"])
-                    ->output("statusCode", 0);
-                    return Forward::createAjaxJson();
+                    //ファイルをDBに保存する。                    
+                    Error::add("header", 'アップロードを失敗しました。');
+                    return ;
 
                 }
             }
         }
 
-        Logger::log('Error : LINE:' + __LINE__ + ' >> CLASS' + __CLASS__);
-        Logger::log($_FILES["file"]);
-
-        Request::newInstance()->output("msg", $_FILES["file"]["name"])
-                        ->output("statusCode", 99)
-                        ->output("insert", [
-                            'title' => $title,
-                            'type' => $type,
-                            'id' => $id,
-                            'edit' => $edit
-                        ]);
-        return Forward::createAjaxJson();
+        return ;
 
     }
 

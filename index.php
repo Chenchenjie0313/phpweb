@@ -12,8 +12,6 @@ App::import('dispatch/Dispatch');
 
 try{
 
-    // App::import('db/MyPDO');
-    // $dbre = MyPDO::create()->select('select * from blog where id = :id',[':id'=>0]);
     // 実行して、結果を取得する。
     $target = Dispatch::create()->excute();
 

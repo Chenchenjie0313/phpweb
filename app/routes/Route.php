@@ -95,7 +95,7 @@ class Route {
      */
     public static function get($path){
         $root = Route::create()->getRootNode();
-        if (!WString::isEmpty($path)){
+        if (!WString::anyEmpty($path)){
             return $root->get($path);
         }
         return $root->get(WEB_APP_DEFAULT_VIEW_PATH);

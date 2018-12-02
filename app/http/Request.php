@@ -69,7 +69,9 @@ class Request {
      * 
      */
     public function output(...$params){
-        if (count($params) == 1){
+        if (count($params) == 0){
+            return WArray::create()->addAll($this->outputData);
+        } else if (count($params) == 1){
             return $this->outputData->get($params[0]);
         }
         else if (count($params) == 2){
@@ -85,13 +87,12 @@ class Request {
      * 
      */
     public function copyInputToView(...$params){
-        $list = WArray::create($params);
-        if ($list->size() == 0){
+        if (count($params) == 0){
             $this->viewData->addAll($this->input());
             Logger::log(__METHOD__.",行:".__LINE__, $this->viewData);
         }
         else {
-            foreach ($list->keys() as $key){
+            foreach ($params as $key){
                 $this->viewData->add($key, $this->input($key));
             }
         }
@@ -104,15 +105,18 @@ class Request {
      * 
      */
     public function view(...$params){
-        $list = WArray::create($params);
-        if ($list->size() == 1){
-            return $this->viewData->get($list->get(0));
+        if (count($params) == 0){
+            return WArray::create()->addAll($this->viewData);
         }
-        else if ($list->size() == 2){
-            $this->viewData->add($list->get(0),$list->get(1));
+        else if (count($params) == 1){
+            return $this->viewData->get($params[0]);
+        }
+        else if (count($params) == 2){
+            $this->viewData->add($params[0], $params[1]);
             return $this;
         }
-        return WArray::create()->addAll($this->viewData);
+        Logger::log(__METHOD__.",行:".__LINE__, $params, "params num is wrong");
+        throw new Exception(__METHOD__ . "args is error!");
     }
 
     public function error(...$params){
@@ -187,9 +191,35 @@ class Request {
         }
         return false;
     }
+}
 
 
+class Input {
 
+    public static function get($params){
+        return Request::create()->input($params);
+    }
+
+    public static function add($kye, $value){
+        return Request::create()->input($kye, $value);
+    }
+
+
+}
+
+class Error {
+    
+    public static function get($params){
+        return Request::create()->error($params);
+    }
+
+    public static function add($kye, $value){
+        return Request::create()->error($kye, $value);
+    }
+
+    public static function isEmpty(){
+        return !Request::create()->hasError();
+    }
 
 
 }

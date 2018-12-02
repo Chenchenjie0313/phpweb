@@ -79,27 +79,24 @@ EOF;
 
         $type = Request::create()->input('type');
         Request::create()->view('type', $type);
-        if (WString::isEmpty($type)){
+        if (WString::create($type)->isEmpty()){
             Request::create()->error('type',"お問い合わせ項目を入力してください。");
         }
 
         $title = Request::create()->input('title');
         Request::create()->view('title', $title);
-        if (WString::isEmpty($title)){
+        if (WString::create($title)->isEmpty()){
             Request::create()->error('title',"タイトルを入力してください。");
         }
 
         $text = Request::create()->input('text');
         Request::create()->view('text', $text);
-        if (WString::isEmpty($text)){
+        if (WString::create($text)->isEmpty()){
             Request::create()->error('text',"内容を入力してください。");
         }
 
         $name = Request::create()->input('name');
         Request::create()->view('name', $name);
-        // if (WString::isEmpty($name)){
-        //     Request::create()->error('name',"お名前を入力してください。");
-        // }
 
         $email = Request::create()->input('email');
         $email_02 = Request::create()->input('email_02');

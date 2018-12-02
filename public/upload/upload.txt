@@ -4,8 +4,12 @@
   </div>
   <!-- /.card-header -->
   <!-- form start -->
-  <form action="" enctype="multipart/form-data" id="uploadForm">
+  <form action="/upload" enctype="multipart/form-data" id="uploadForm" method="post">
     <div class="card-body">
+      <div class="form-group">
+        <label for="description">TYPE</label>
+        <input type="type" class="form-control" id="description" placeholder="デスクリプション" name="description">
+      </div>
       <div class="form-group">
         <label for="description">デスクリプション</label>
         <input type="text" class="form-control" id="description" placeholder="デスクリプション" name="description">
@@ -32,6 +36,7 @@
 
     <div class="card-footer">
       <a class="btn btn-primary" data-upload="#uploadForm">OK</a>
+      <input type="submit" class="btn btn-primary">OK</a>
     </div>
   </form>
 </div>
